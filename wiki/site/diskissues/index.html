@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Disk Issues - DeskPi Pro Wiki</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Disk Issues";
+    var mkdocs_page_input_path = "diskissues.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> DeskPi Pro Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Getting Start</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hardware/">Hardware</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Software</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../ostype/">Compatible systems</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../install/">How to install DeskPi driver</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../uninstall/">How to Uninstall DeskPi driver</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tool/">How to use deskpi-config tool</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../diskpart/">How to build partition on disk</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../formatdisk/">How to format a partition</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mountdisk/">How to mount partition</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../frontusb/">How to enable Front USB Port</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../enableIR/">How to enable IR support</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../usbboot/">How to USB Boot from SSD Drive</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">FAQ</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../osissues/">OS Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../frontusbissues/">Front USB Port Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../hdmiissues/">HMID Port Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../audioissues/">3.5mm Audio Jack</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Disk Issues</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../powerissues/">Power Supply Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../hardwareissues/">Hardware Issues</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../contact/">Contact</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../version/">Verion</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">DeskPi Pro Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>FAQ &raquo;</li>
+        
+      
+    
+    <li>Disk Issues</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="getting-start">Getting Start</h2>
+<p><img alt="DeskPi Pro" src="../imgs/DeskPi%20logo.png" />.</p>
+<p>For order please visit: <a href="https://www.deskpi.com/">DeskPi.com</a>.</p>
+<h2 id="disk-drive-issues">Disk drive Issues</h2>
+<h3 id="why-does-my-ssd-hard-drive-not-work-normally-after-my-logitech-wireless-mouse-and-keyboard-dongle-is-connected-to-deskpi">Why does my SSD hard drive not work normally after my Logitech wireless mouse and keyboard dongle is connected to DeskPi?</h3>
+<ul>
+<li>Because the 2.4G frequency used by Logitech's mouse and keyboard interferes with DeskPi's USB transfer interface, it will cause the disk to work in an unstable state. This problem with Logitech's keyboard and mouse also occurs on desktop computers. The current solution is best to replace the wireless keyboard and mouse or use a wired keyboard and mouse.</li>
+</ul>
+<h3 id="why-is-it-normal-when-i-start-the-raspberry-pi-with-a-tf-card-but-the-sata-ssd-hard-disk-cannot-appear-on-the-desktop">Why is it normal when I start the Raspberry Pi with a TF card, but the SATA SSD hard disk cannot appear on the desktop?</h3>
+<ul>
+<li>The disk cannot be displayed on the desktop may be caused by the following reasons:</li>
+<li><code>Hardware connection</code> - The hardware is not connected properly, such as forgetting to install the USB adapter.</li>
+<li><code>Not Initialized Before</code> - The SATA SSD hard disk is a RAW Disk, the brand new one has not been partitioned, formatted, or mounted.</li>
+<li><code>Unavailable file system format</code> - file sytem format not recognized by the Linux system is used, for example: NTFS </li>
+</ul>
+<h3 id="solution-and-diagnostic">Solution and diagnostic</h3>
+<ul>
+<li><code>Reconnect SATA SSD to DeskPi Disk Adapter board</code> </li>
+<li><code>Format partitions and mount disks manually</code> - Following steps:</li>
+<li>Open a terminal or press l"Ctrl+Alt+T".</li>
+<li>Typing: "sudo fdisk -l" to check if the disk has been recognized or typing: "sudo lsusb -t", typing: "dmesg |grep -i usb" to make sure disk has been connected.</li>
+<li>If the disk can be found by those commands, manually format and mount the partition:<br />
+ for example: </li>
+<li><code>sudo fdisk /dev/sda</code> - sda means my first SCSI type disk which recognized by my system.</li>
+<li><code>p</code> - typing <code>p</code> means print current partions that contains on the disk.</li>
+<li><code>n</code> - new partion -&gt; <code>p</code> - primary partion -&gt; <code>1</code> -&gt; partion number -&gt; <code>Enter</code>-&gt; first celinder -&gt; <code>Enter</code> last celinder -&gt; make the whole disk as a partion -&gt; <code>w</code> - write the partion table to disk and quit. </li>
+<li><code>sudo partprobe /dev/sda</code> - make it recognized by linux kernel.</li>
+<li><code>mkdir /home/pi/mydata</code> - create mounting directory.</li>
+<li><code>sudo mkfs.ext4 /dev/sda1</code> - format partion <code>/dev/sda1</code> to <code>ext4</code> type which support <code>journal</code> on data saving.</li>
+<li><code>sudo mount -t ext4 /dev/sda1 /home/pi/mydata</code> - mount the partion to mount point so that we can access it.</li>
+<li><code>sudo chmod -R 777 /home/pi/mydata</code> - Set premission to the folder so that we can write and read date to disk.</li>
+<li><code>sudo mount -a</code> - Test automount.</li>
+<li><code>df -Th</code> - Check if there is a partion has been mounted on /home/pi/mydata.</li>
+</ul>
+<h3 id="some-explanations">Some Explanations</h3>
+<ul>
+<li>The <code>defaults</code> mount option will give users read and write access to the file system.</li>
+<li>The value of <code>dump</code> field is usually zero.</li>
+<li>The <code>pass</code> field is used by the fsck program to determine the order in which filesystem checks are done at reboot time. As you can see in this file, the value of the pass field for the root file system is 1. Swap partitions do not need to be checked and the value for them is zero. All other file systems should have a value of 2. So I set the pass value as 2 for my drive.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../powerissues/" class="btn btn-neutral float-right" title="Power Supply Issues">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../audioissues/" class="btn btn-neutral" title="3.5mm Audio Jack"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../audioissues/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../powerissues/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
