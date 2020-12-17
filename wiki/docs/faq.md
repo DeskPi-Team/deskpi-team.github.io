@@ -66,8 +66,13 @@ Save and close the file. Then run the following command to see if it works.
 
 * Please try to shift HDMI cable from HDMI0 to HDMI1 which is beside 3.5mm audio jack and try again.
 
-## USB booting
+## USB booting Issues
 ### Why does it take so much time when I boot it from USB booting?
 
 * It seems to be some tough question, some issues may caused by the usb controller chip performance issue.
 
+## Power Supply Issues
+### The included wall charger is not working properly, if it's attached, the power button keeps flashing in red and the device can't be switched on. (Other power adapters (e.g. the official power supply) are working fine.) 
+
+* At the first time,the power button keeps flashing in red, please unplug the power charger and then plug it again, wait for a few seconds, and if the power button still keeps flashing in red, please contact our sales man.
+* The output voltage of our power supply to DeskPi is `12V`, and the voltage provided by DeskPi to the Raspberry Pi is `5V`. The general power supply cannot provide a suitable voltage.

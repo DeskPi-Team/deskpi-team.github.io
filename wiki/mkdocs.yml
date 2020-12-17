@@ -3,3 +3,4 @@ nav:
         - Home: index.md
         - FAQ: faq.md
         - Contact: contact.md
+theme:  readthedocs
