@@ -1,0 +1,5 @@
+site_name: DeskPi Pro Wiki
+nav:
+        - Home: index.md
+        - FAQ: faq.md
+        - Contact: contact.md
