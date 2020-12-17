@@ -1,0 +1,27 @@
+site_name: DeskPi Pro Wiki
+nav:
+        - Home: index.md
+        - Getting Start: 
+                - Hardware: hardware.md
+                - Software: 
+                    - Compatible systems: ostype.md
+                    - How to install DeskPi driver: install.md
+                    - How to Uninstall DeskPi driver: uninstall.md 
+                    - How to use deskpi-config tool: tool.md
+                    - How to build partition on disk: diskpart.md
+                    - How to format a partition: formatdisk.md
+                    - How to mount partition: mountdisk.md
+                    - How to enable Front USB Port: frontusb.md 
+                    - How to enable IR support: enableIR.md
+                    - How to USB Boot from SSD Drive: usbboot.md
+        - FAQ: 
+               - OS Issues: osissues.md
+               - Front USB Port Issues: frontusbissues.md
+               - HMID Port Issues: hdmiissues.md
+               - 3.5mm Audio Jack: audioissues.md
+               - Disk Issues: diskissues.md
+               - Power Supply Issues: powerissues.md
+               - Hardware Issues: hardwareissues.md
+        - Contact: contact.md
+        - Verion: version.md 
+theme:  readthedocs
