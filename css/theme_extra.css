@@ -39,8 +39,7 @@
 
 .rst-content pre code {
     color: #000;
-    /*background: #f8f8f8;*/
-    background: #fffff8;
+    background: #f8f8f8;
 }
 
 /*
@@ -114,8 +113,8 @@ form .search-query {
  * https://github.com/mkdocs/mkdocs/issues/656
  */
  .rst-content .admonition code {
-  color: #404040; 
-  border: 1px solid #c7c9cb; 
+  color: #404040;
+  border: 1px solid #c7c9cb;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background: #f8fbfd;
   background: rgba(255, 255, 255, 0.7);
