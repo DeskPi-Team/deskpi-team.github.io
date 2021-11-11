@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>How to USB Boot from SSD Drive - DeskPi Pro Wiki</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "How to USB Boot from SSD Drive";
+    var mkdocs_page_input_path = "usbboot.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> DeskPi Pro Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Getting Start</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../hardware/">Hardware</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Software</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../ostype/">Compatible systems</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../install/">How to install DeskPi driver</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../uninstall/">How to Uninstall DeskPi driver</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tool/">How to use deskpi-config tool</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../diskpart/">How to build partition on disk</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../formatdisk/">How to format a partition</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mountdisk/">How to mount partition</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../frontusb/">How to enable Front USB Port</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../enableIR/">How to enable IR support</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">How to USB Boot from SSD Drive</a>
+    <ul class="current">
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">FAQ</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../osissues/">OS Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../frontusbissues/">Front USB Port Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../hdmiissues/">HMID Port Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../audioissues/">3.5mm Audio Jack</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../diskissues/">Disk Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../powerissues/">Power Supply Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../hardwareissues/">Hardware Issues</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../contact/">Contact</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../version/">Verion</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">DeskPi Pro Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Software &raquo;</li>
+        
+      
+        
+          <li>Getting Start &raquo;</li>
+        
+      
+    
+    <li>How to USB Boot from SSD Drive</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="getting-start">Getting Start</h2>
+<p><img alt="DeskPi Pro" src="../imgs/DeskPi%20logo.png" />.</p>
+<p>For order please visit: <a href="https://www.deskpi.com/">DeskPi.com</a>.</p>
+<h2 id="how-to-boot-from-usb-ssdhdd">How to boot from USB SSD/HDD?</h2>
+<p>After initial Raspberry Pi Configuration and once you have Internet Connectivity established, Install the DeskPi Pro Utilities from <code>https://github.com/DeskPi-Team/deskpi.git</code>
+* Open a Terminal / Console and run the following commands:  </p>
+<pre><code class="language-bash">sudo apt update
+sudo apt full-upgrade
+sudo rpi-update
+</code></pre>
+<ul>
+<li>When complete, run:</li>
+</ul>
+<pre><code class="language-bash">sudo reboot
+</code></pre>
+<ul>
+<li>Upon reboot, open Terminal again:</li>
+</ul>
+<pre><code class="language-bash">sudo raspi-config
+</code></pre>
+<ul>
+<li>go to Advanced Options </li>
+<li>Select Boot Order, select #1 <code>USB Boot</code>, Return to Advanced Options,</li>
+<li>Select Boot Loader Version, choose <code>Latest Version</code></li>
+<li>Save &amp; exit</li>
+<li>Reboot again (to restart with new settings)</li>
+</ul>
+<pre><code class="language-bash">sudo reboot 
+</code></pre>
+<p>After reboot, re-open Terminal again</p>
+<pre><code class="language-bash">sudo -E rpi-eeprom-config --edit
+</code></pre>
+<p>• Do not change anything, it is unnecessary
+• Press <code>Ctrl-X</code> to save, answer <code>Y</code> to overwrite file.</p>
+<pre><code class="language-bash">sudo reboot    
+</code></pre>
+<ul>
+<li>Now you are ready to install Raspberry-OS onto your USB Boot Device.
+You can use the Raspberry Imager from <code>www.raspberrypi.org</code> website. 
+Depending on device the new SD Card Copier can transfer the SD-Card image to the USB Device (ensure you select generate a new UUID). 
+Once your USB drive is imaged &amp; ready to boot, shutdown your Deskpi-Pro, remove the SD-Card and power-up to boot from the USB Boot drive, once running &amp; configured you can install your additional software and proceed as usual. </li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../osissues/" class="btn btn-neutral float-right" title="OS Issues">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../enableIR/" class="btn btn-neutral" title="How to enable IR support"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../enableIR/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../osissues/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
