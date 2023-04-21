@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://wiki.deskpi.com/deskpipro/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>DeskPi Pro - DeskPi Products Wiki</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "DeskPi Pro";
+        var mkdocs_page_input_path = "deskpipro.md";
+        var mkdocs_page_url = "/deskpipro/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> DeskPi Products Wiki
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../picomate/">DeskPi PicoMate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../super6c/">DeskPi Super6C</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../deskpilite/">DeskPi Lite</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../deskpinano/">DeskPi Nano</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">DeskPi Pro</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#currently-tested-operating-systems-that-can-support-deskpi-scripts">Currently tested operating systems that can support Deskpi scripts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#please-read-this-section-carefully">Please Read this section carefully</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-install-it">How to install it.</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#for-raspbian-and-retropie-os-32bit">For Raspbian and RetroPie OS. (32bit)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-ubuntu-64bit-os">For Ubuntu 64bit OS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-ubuntu-mate-os">For Ubuntu-mate OS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-manjaro-os">For Manjaro OS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-kali-linux-arm-os">For Kali-linux-arm OS.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-twister-os-v202">For Twister OS v2.0.2</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-64-bit-raspberry-pi-os-aarm64">For 64 bit Raspberry Pi OS (aarm64)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-dietpi-os-64bit">For DietPi OS 64bit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-volumio-os-version-2021-04-24-pi">For Volumio OS Version: 2021-04-24-Pi</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-uninstall-deskpi">How to Uninstall deskpi</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#for-windows-iot-os">For Windows IoT OS</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-control-fan-speed-mannualy">How to control fan speed mannualy.</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#selection-explain">Selection explain</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-boot-from-usb-ssdhdd">How to boot from USB SSD/HDD?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#reboot-again-to-restart-with-new-settings">Reboot again (to restart with new settings)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-use-ir-function-onboard">How to Use IR function onboard.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deskpi-pro_1">DeskPi Pro</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../osversion/">How to check OS version</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ipcheck/">How to check wifi connection</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ssdcheck/">How to check SSD/HDD status</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../frontUSB/">How to check front USB port</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../hdmicheck/">How to check HDMI configuration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ircheck/">How to check IR remote</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../audiocheck/">How to check Audio Output</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">DeskPi Products Wiki</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>DeskPi Pro</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="deskpi-pro">DeskPi Pro</h1>
+<h2 id="description">Description</h2>
+<p>The DeskPi Pro is a hardware kit for converting a standard Raspberry Pi 4 from a naked SBC, with limited storage, into a mini PC complete with a power button, cooling, better ports and, via SATA then USB3, 2.5" or M.2 SATA SSD storage.</p>
+<pre>Note: Support M.2 SATA SSD only, Does not support M.2 NVME SSD </pre>
+
+<h2 id="currently-tested-operating-systems-that-can-support-deskpi-scripts">Currently tested operating systems that can support Deskpi scripts</h2>
+<ul>
+<li>Raspberry Pi OS(32bit) - tested </li>
+<li>RaspiOS (64bit) - tested </li>
+<li>Ubuntu-mate OS(32bit) - tested</li>
+<li>Ubuntu OS (64bit) - tested </li>
+<li>Manjaro OS (32bit) - tested </li>
+<li>Manjaro OS (64bit) - To be tested</li>
+<li>Kali-linux-arm OS (32bit) - tested</li>
+<li>Kali-linux-arm OS (64-Bit) - To be tested</li>
+<li>Twister OS v2.0.2 (32bit) - tested </li>
+<li>DietPi OS (64bit) - tested</li>
+<li>Volumio OS Version: 2021-04-24-Pi (32bit) - tested </li>
+<li>RetroPie OS (32bit) - tested</li>
+</ul>
+<h2 id="please-read-this-section-carefully">Please Read this section carefully</h2>
+<ul>
+<li>if you are using 64bit OS, The script to control the fan is in the <code>drivers/c/</code> directory. The file suffix with <code>64</code> means <code>64bit</code>, and the other one is a <code>32bit</code> executable file.</li>
+<li>Before you install this script, please make sure your Raspberry Pi can access internet and can access github website.</li>
+</ul>
+<h2 id="how-to-install-it">How to install it.</h2>
+<h3 id="for-raspbian-and-retropie-os-32bit">For Raspbian and RetroPie OS. (32bit)</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>~
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/DeskPi-Team/deskpi.git
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">cd</span><span class="w"> </span>~/deskpi/
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>chmod<span class="w"> </span>+x<span class="w"> </span>install.sh
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>sudo<span class="w"> </span>./install.sh
+</span></code></pre></div>
+<h3 id="for-ubuntu-64bit-os">For Ubuntu 64bit OS</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>~
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/DeskPi-Team/deskpi.git
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">cd</span><span class="w"> </span>~/deskpi/
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>chmod<span class="w"> </span>+x<span class="w"> </span>install-ubuntu-64.sh
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>sudo<span class="w"> </span>./install-ubuntu-64.sh
+</span></code></pre></div>
+<h3 id="for-ubuntu-mate-os">For Ubuntu-mate OS</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>~
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/DeskPi-Team/deskpi.git
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">cd</span><span class="w"> </span>~/deskpi/
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>chmod<span class="w"> </span>+x<span class="w"> </span>install-ubuntu-mate.sh
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>sudo<span class="w"> </span>./install-ubuntu-mate.sh
+</span></code></pre></div>
+<h3 id="for-manjaro-os">For Manjaro OS</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>~
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/DeskPi-Team/deskpi.git
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">cd</span><span class="w"> </span>~/deskpi/
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>chmod<span class="w"> </span>+x<span class="w"> </span>install-manjaro.sh
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>sudo<span class="w"> </span>./install-manjaro.sh
+</span></code></pre></div>
+<h3 id="for-kali-linux-arm-os">For Kali-linux-arm OS.</h3>
+<ul>
+<li>Image Download URL: https://images.kali.org/arm-images/kali-linux-2020.3a-rpi3-nexmon.img.xz <br>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>~
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/DeskPi-Team/deskpi.git
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">cd</span><span class="w"> </span>~/deskpi/
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>chmod<span class="w"> </span>+x<span class="w"> </span>install-kali.sh
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>sudo<span class="w"> </span>./install-kali.sh
+</span></code></pre></div></li>
+</ul>
+<h3 id="for-twister-os-v202">For Twister OS v2.0.2</h3>
+<p><code>OS image: TwisterOSv2-0-2.img</code>
+* Image Download URL:https://twisteros.com/twisteros.html <br>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>~
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/DeskPi-Team/deskpi.git
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">cd</span><span class="w"> </span>~/deskpi/
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>chmod<span class="w"> </span>+x<span class="w"> </span>install.sh
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>sudo<span class="w"> </span>./install.sh
+</span></code></pre></div></p>
+<h3 id="for-64-bit-raspberry-pi-os-aarm64">For 64 bit Raspberry Pi OS (aarm64)</h3>
+<ul>
+<li>Image Download URL: http://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2021-05-28/</li>
+</ul>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>~
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/DeskPi-Team/deskpi.git
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nb">cd</span><span class="w"> </span>~/deskpi/
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>chmod<span class="w"> </span>+x<span class="w"> </span>install-raspios-64bit.sh
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>sudo<span class="w"> </span>./install-raspios-64bit.sh
+</span></code></pre></div>
+* Uninstall: 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>cd ~/deskpi/
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>chmod +x install-raspios-64bit.sh
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>sudo ./uninstall-raspios-64bit.sh
+</span></code></pre></div></p>
+<h3 id="for-dietpi-os-64bit">For DietPi OS 64bit</h3>
+<ul>
+<li>Make sure your OS can access internet and please install <code>git</code> first.</li>
+<li>Execute this command in terminal:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>apt-get update &amp;&amp; apt-get -y install git 
+</span></code></pre></div></li>
+<li>Image Download URL:  https://dietpi.com/downloads/images/DietPi_RPi-ARMv8-Bullseye.7z</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">cd</span><span class="w"> </span>~
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/DeskPi-Team/deskpi.git
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nb">cd</span><span class="w"> </span>~/deskpi/
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>./install.sh
+</span></code></pre></div>
+<h3 id="for-volumio-os-version-2021-04-24-pi">For Volumio OS Version: 2021-04-24-Pi</h3>
+<ul>
+<li>Image Download URL: https://updates.volumio.org/pi/volumio/2.882/volumio-2.882-2021-04-24-pi.img.zip</li>
+<li>Getting Start:　https://volumio.github.io/docs/User_Manual/Quick_Start_Guide.html</li>
+<li>Make sure your Volumio can access internet. </li>
+<li>There are some steps need to do.</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/network/interface
+</span></code></pre></div>
+<p>make sure following parameters in file <code>/etc/network/interface</code> </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>auto<span class="w"> </span>wlan0<span class="w"> </span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>allow-hotplug<span class="w"> </span>wlan0<span class="w"> </span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>iface<span class="w"> </span>wlan0<span class="w"> </span>inet<span class="w"> </span>dhcp
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>wpa-ssid<span class="w"> </span><span class="s2">&quot;YOUR WIFI SSID&quot;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>wpa-psk<span class="w"> </span><span class="s2">&quot;YOUR WIFI PASSWORD&quot;</span>
+</span></code></pre></div>
+<p>and enable the internet access by typing this command in terminal:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>volumio<span class="w"> </span>internet<span class="w"> </span>on
+</span></code></pre></div>
+<p>and then reboot your DeskPi.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sudo<span class="w"> </span>reboot
+</span></code></pre></div>
+<ul>
+<li>Download DeskPi driver from github:</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/DeskPi-Team/deskpi.git
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">cd</span><span class="w"> </span>deskpi/
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>sudo<span class="w"> </span>./install.sh
+</span></code></pre></div>
+<ul>
+<li>TEST it after rebooting.</li>
+</ul>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>deskpi-config
+</span></code></pre></div>
+Select <code>4</code> and press <code>Enter</code>, you would see the fan is spinning and the front USB port are now available.</p>
+<h2 id="how-to-uninstall-deskpi">How to Uninstall deskpi</h2>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>DeskPi-uninstall<span class="w"> </span>
+</span></code></pre></div>
+And then select the number against to your OS Type.</p>
+<h3 id="for-windows-iot-os">For Windows IoT OS</h3>
+<ul>
+<li>Unsupported due to lacking of driver.</li>
+<li>Testing version: Midnight falcon</li>
+</ul>
+<h2 id="how-to-control-fan-speed-mannualy">How to control fan speed mannualy.</h2>
+<ul>
+<li>Open a terminal and typing following command:</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>deskpi-config
+</span></code></pre></div>
+<p>You can follow the instructions to setup fan speed level by typing numbers as
+following example:</p>
+<h3 id="selection-explain">Selection explain</h3>
+<ul>
+<li>
+<p>The number from 1 to 4 is to setting your fan speed to a static level.</p>
+</li>
+<li>
+<p>Number 5 is just turn off the fan.</p>
+</li>
+<li>
+<p>Number 6 is to guide you to create a file located to /etc/deskpi.conf and you
+can specify the threshold of temperature and fan speed level according to your
+idea, once the file has been created, the program will according to the
+configuration file to setup your fan.</p>
+</li>
+<li>
+<p>Number 7 is to enable automatic fan control by default paramaters. </p>
+</li>
+</ul>
+<p>** Default arguments:  </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>TEMP<span class="w">   </span>:<span class="w"> </span>Fan_SPEED_LEVEL
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>&lt;40C<span class="w">   </span>:<span class="w"> </span><span class="m">0</span>%<span class="w">  </span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="m">40</span>~50C<span class="w"> </span>:<span class="w"> </span><span class="m">25</span>%<span class="w">  </span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="m">50</span>~65C<span class="w"> </span>:<span class="w"> </span><span class="m">50</span>%<span class="w">  </span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="m">65</span>~75C<span class="w"> </span>:<span class="w"> </span><span class="m">75</span>%<span class="w">  </span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>&gt;75C<span class="w">   </span>:<span class="w"> </span><span class="m">100</span>%<span class="w">  </span>
+</span></code></pre></div>
+<p><img alt="Example" src="https://raw.githubusercontent.com/DeskPi-Team/deskpi/master/imgs/deskpi-config-snap.jpg" /></p>
+<p>** If you want to change it, just typing :</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>deskpi-config
+</span></code></pre></div>
+<p>Select <code>6</code> and then input <code>45</code> and enter, and then input <code>50</code> means setup the fan speed level to <code>50%</code> when CPU temp is above 45 degree it has 4 level to setup.
+NOTE: 50% Speed level means you have already send <code>PWM50</code> to <code>/dev/ttyUSB0</code> port, and this port will available when you add <code>dtoverlay=dwc2,dr_mode=host</code> to <code>/boot/config.txt</code> file and <code>reboot</code> your DeskPi. </p>
+<h2 id="how-to-boot-from-usb-ssdhdd">How to boot from USB SSD/HDD?</h2>
+<p>After initial Raspberry Pi Configuration and once you have Internet Connectivity established, Install the DeskPi Pro Utilities from <code>https://github.com/DeskPi-Team/deskpi.git</code></p>
+<p>Open a Terminal / Console and run the following commands:  </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>full-upgrade
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>sudo<span class="w"> </span>rpi-update
+</span></code></pre></div>
+<p>When complete, run:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>sudo<span class="w"> </span>reboot
+</span></code></pre></div>
+<p>Upon reboot, open Terminal again:</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>sudo<span class="w"> </span>raspi-config
+</span></code></pre></div>
+* go to Advanced Options 
+* Select Boot Order, select #1 <code>USB Boot</code>, Return to Advanced Options,
+* Select Boot Loader Version, choose <code>Latest Version</code>
+* Save &amp; exit</p>
+<h3 id="reboot-again-to-restart-with-new-settings">Reboot again (to restart with new settings)</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>sudo<span class="w"> </span>reboot<span class="w"> </span>
+</span></code></pre></div>
+<p>After reboot, re-open Terminal again</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>sudo<span class="w"> </span>-E<span class="w"> </span>rpi-eeprom-config<span class="w"> </span>--edit
+</span></code></pre></div>
+<ul>
+<li>do not change anything, it is unnecessary</li>
+<li>press Ctrl-X to save, answer Y to overwrite file.</li>
+</ul>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>sudo<span class="w"> </span>reboot<span class="w">    </span>
+</span></code></pre></div>
+Now you are ready to install Raspberry-OS onto your USB Boot Device.
+You can use the Raspberry Imager from <code>www.raspberrypi.org</code> website. 
+Depending on device the new SD Card Copier can transfer the SD-Card image to the USB Device (ensure you select generate a new UUID). 
+Once your USB drive is imaged &amp; ready to boot, shutdown your Deskpi-Pro, remove the SD-Card and power-up to boot from the USB Boot drive, once running &amp; configured you can install your additional software and proceed as usual. 
+<br></p>
+<ul>
+<li><a href="https://youtu.be/wUHZb9E_WDQ">Tutorial Video On YouTube</a></li>
+</ul>
+<h2 id="how-to-use-ir-function-onboard">How to Use IR function onboard.</h2>
+<ol>
+<li>You need to enable <code>gpio-ir</code> function by modify <code>/boot/config.txt</code> file.
+uncomment this line if not exsit please add it.</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nv">dtoverlay</span><span class="o">=</span>gpio-ir,gpio_pin<span class="o">=</span><span class="m">17</span><span class="w"> </span>
+</span></code></pre></div>
+<ol>
+<li>Install <code>lirc</code> package:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>lirc
+</span></code></pre></div>
+<ol>
+<li>Modify configuration file on location: /etc/lirc/lirc_options.conf and make sure it has following parameters:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nv">driver</span><span class="w">          </span><span class="o">=</span><span class="w"> </span>default
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="nv">device</span><span class="w">          </span><span class="o">=</span><span class="w"> </span>/dev/lirc0
+</span></code></pre></div>
+<ol>
+<li>Reboot your Raspberry Pi and test it with following command:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>mode2<span class="w"> </span>-d<span class="w"> </span>/dev/lirc1
+</span></code></pre></div>
+<h2 id="deskpi-pro_1">DeskPi Pro</h2>
+<p><img alt="LOGO" src="https://raw.githubusercontent.com/DeskPi-Team/deskpi/master/imgs/deskpilogo1.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../deskpinano/" class="btn btn-neutral float-left" title="DeskPi Nano"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../faq/" class="btn btn-neutral float-right" title="FAQ">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../deskpinano/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../faq/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
