@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://wiki.deskpi.com/minipc/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>DeskPi Mini PC - DeskPi Products Wiki</title>
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "DeskPi Mini PC";
+    var mkdocs_page_input_path = "minipc.md";
+    var mkdocs_page_url = "/minipc/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> DeskPi Products Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../expansionkit/">DeskPi Lite Expansion Kit</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">DeskPi Mini PC</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#purchase">Purchase</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#features">Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gallery">Gallery</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rtc-battery-information">RTC Battery Information</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#package-includes">Package Includes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-assemble-it">How to assemble it</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#optional-install-m2-nvme-ssd-m-key-22422240">[Optional] Install M.2 NVME SSD M-KEY 2242/2240.</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#functionality-of-power-button">Functionality of power button:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dip-switch-functionality">DIP Switch Functionality</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#dip-switch-pinout">DIP Switch Pinout</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-enable-usb20-ports-besides-the-usb-c-port">How to enable USB2.0 ports besides the USB-C port?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-enable-fan-automatically">How to enable fan automatically?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#official-fan-setting">Official Fan setting</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#control-fan-manually">Control Fan manually</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#demo-code">Demo code</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-enable-onboard-rtc-module">How to enable onboard RTC module?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#faq">FAQ</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../picomate/">DeskPi PicoMate</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../super6c/">DeskPi Super6C</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../deskpilite/">DeskPi Lite</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../deskpinano/">DeskPi Nano</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../deskpipro/">DeskPi Pro</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">DeskPi Products Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>DeskPi Mini PC</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="deskpi-mini-cube">DeskPi Mini Cube</h1>
+<ul>
+<li>New Product:   ⭐⭐⭐⭐⭐</li>
+<li>Compability:    ⭐⭐⭐⭐</li>
+<li>Mobility: ⭐⭐⭐⭐⭐</li>
+<li>Assemble Difficulty: ⭐</li>
+</ul>
+<p><img alt="DeskPi Mini Cube" src="../imgs/deskpiminicube/DP-0019-1.jpg" /></p>
+<h2 id="purchase">Purchase</h2>
+<p><img alt="chart" src="../imgs/picomate/shoppingchart.jpg" /></p>
+<p><a href="https://deskpi.com/collections/deskpi-minicube">DeskPi Mini Cube</a></p>
+<h2 id="description">Description</h2>
+<p>DeskPi Mini Cube for Raspberry Pi CM4 is a case with a miniature appearance and extremely portable features.</p>
+<blockquote>
+<p>Note: Only supports Raspberry Pi CM4 module</p>
+</blockquote>
+<p>The device provides a mini aluminum alloy radiator and integrates a silent fan that supports PWM speed regulation.</p>
+<p>The bottom board provides a wealth of interfaces, supporting dual full-size HDMI interfaces, RJ45 Ethernet interfaces, 2x OTG USB port (<code>dwc2 Overlay needs to be configured to enable it</code>), and one PCIe interface supports <code>M.2 NVME SSD M-KEY 2242</code> external storage. </p>
+<p>The DIP switch on the back provides the special pins needed to configure the Raspberry Pi CM4 module. (On Compute Module 4 EMMC-DISABLE / nRPIBOOT (GPIO 40) must be fitted to switch the ROM to usbboot mode.)</p>
+<p>Otherwise, the SPI EEPROM bootloader image will be loaded instead.</p>
+<p>The 40Pin GPIO lead out and reserved RTC clock battery interface.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Integrated design</li>
+<li>Aluminum alloy radiator with PWM adjustable speed fan</li>
+<li>Power button</li>
+<li>2 x Full-size HDMI ports</li>
+<li>2 x OTG USB2.0 port</li>
+<li>1 x PCIe M.2 NVME M-KEY 2242 SSD slot </li>
+<li>1 x 40 Pin GPIO lead out</li>
+<li>1 x DIP switch for mode change (CM4 function change)</li>
+<li>1 x Onboard PCF85063 I2C RTC module </li>
+<li>5V USB-C Port Power IN</li>
+</ul>
+<h2 id="gallery">Gallery</h2>
+<ul>
+<li>
+<p>Product Outlook 
+<img alt="DeskPi mini cube feature1" src="../imgs/deskpiminicube/DP-0019-1.jpg" /></p>
+</li>
+<li>
+<p>Backside of Mini Cube 
+<img alt="DeskPi mini cube feature2" src="../imgs/deskpiminicube/DP-0019-2.jpg" /></p>
+</li>
+<li>
+<p>Ports Definitions
+<img alt="DeskPi mini cube feature3" src="../imgs/deskpiminicube/DP-0019-3.jpg" /></p>
+</li>
+<li>
+<p>Inside of Mini Cube<br />
+<img alt="DeskPi mini cube feature4" src="../imgs/deskpiminicube/DP-0019-5.jpg" /></p>
+</li>
+<li>
+<p>Dimension
+<img alt="DeskPi mini cube feature5" src="../imgs/deskpiminicube/DP-0019-7.jpg" /></p>
+</li>
+<li>
+<p>IPX antenna specifications</p>
+<ul>
+<li>Centre Frequency: 2400-2500MHz &amp; 4900-5900MHz</li>
+<li>Connector: IPEX1</li>
+<li>Lead Length:  </li>
+<li>Antenna Element Length:  mm (+/- 1mm)</li>
+<li>Antenna Element Cable: 1.13 Coaxial cable, with plastic coating.</li>
+<li>Impedance: 5Ohm.</li>
+<li>Gain: About 3 dBi.
+<img alt="IPEX1 Antenna" src="../imgs/deskpiminicube/DP-0019-11.jpg" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="rtc-battery-information">RTC Battery Information</h2>
+<p>ear RTC Battery <code>dose not</code> include in the package, additional purchase required! 
+* Fit for: laptop CMOS Battery, Recommended <code>CR1220 3V</code> with <code>ZH1.25</code> Connector.</p>
+<h2 id="package-includes">Package Includes</h2>
+<ul>
+<li>1 x DeskPi Mini Cube for Raspberry Pi computer module 4
+<img alt="DeskPi mini cube feature6" src="../imgs/deskpiminicube/DP-0019-4.jpg" /></li>
+</ul>
+<h2 id="how-to-assemble-it">How to assemble it</h2>
+<ul>
+<li>Step 1. Unloose four screws on top of mini cube.</li>
+<li>Step 2. Remove copper pillar and paste thermal pad on top of Raspberry Pi CM4 module.</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><code>NOTE：Please peel off the protection film on both side of the thermal pad.
+and press the Raspberry Pi CM4 module according to following figure, please be ware of the direction and angle when press the Raspberry Pi CM4 module.</code> </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>Step 3. Fix aluminum heat sink to Raspberry Pi CM4 module with copper pillars.</li>
+</ul>
+<p>Please refer to following figure to assemble it.</p>
+<p><img alt="DeskPi mini cube feature4" src="../imgs/deskpiminicube/DP-0019-6.jpg" /></p>
+<h3 id="optional-install-m2-nvme-ssd-m-key-22422240">[Optional] Install M.2 NVME SSD M-KEY 2242/2240.</h3>
+<ol>
+<li>
+<p>Remove the screws on bottom of mini cube and remove the PCB which is connected to mainboard on 40Pin GPIO. </p>
+</li>
+<li>
+<p>Insert SSD drive into the slot in 45-degree angle and fix it with screw.  </p>
+</li>
+<li>
+<p>Cover it back to 40Pin GPIO and make sure it connect properly.   </p>
+</li>
+<li>
+<p>Fix the bottom case with screws.
+<img alt="DIP Switch Details" src="../imgs/deskpiminicube/DP-0019-8.jpg" /></p>
+</li>
+</ol>
+<h2 id="functionality-of-power-button">Functionality of power button:</h2>
+<ul>
+<li>Short Press:  <code>Power on</code></li>
+<li>Long Press:  <code>Power off (Cutoff power)</code></li>
+</ul>
+<blockquote>
+<p>Please <code>NOTE</code> that if you have not shutdown the system, do not use long press to halt system, it will damage your system, it may cause kernel panic or lost file which are not saved yet. </p>
+</blockquote>
+<ul>
+<li><strong>Correct Operation</strong>:
+Shutdown system in terminal or desktop, and then long press the button to cut off power.</li>
+</ul>
+<h2 id="dip-switch-functionality">DIP Switch Functionality</h2>
+<p><img alt="DIP Switch Details" src="../imgs/deskpiminicube/DP-0019-9.jpg" /></p>
+<h3 id="dip-switch-pinout">DIP Switch Pinout</h3>
+<ul>
+<li>1 - USB OTG Pull UP</li>
+<li>2 - UNATTENDEND </li>
+<li>3 - EEPROM_nWP  (EEPROM write protection)</li>
+<li>4.- nRPIBOOT  (disable or enable eMMC Boot)
+<img alt="DIP Switch" src="../imgs/deskpiminicube/DP-0019-12.jpg" /></li>
+</ul>
+<p>If you are using Raspberry Pi CM4 with EMMC onboard. please refer to this URL:
+<a href="https://www.raspberrypi.com/documentation/computers/compute-module.html#compute-module-4">How to flash the Compute Module</a> in section <code>“Flashing the Compute Module eMMC”</code> </p>
+<p>Hardware write-protection must be <code>enabled</code> via software and then locked by pulling the <code>EEPROM_nWP</code> pin low.</p>
+<h2 id="how-to-enable-usb20-ports-besides-the-usb-c-port">How to enable USB2.0 ports besides the USB-C port?</h2>
+<p><strong>Assume that you are using Raspberry Pi OS (64bit/32bit).</strong></p>
+<p>Adding following parameter into /boot/config.txt file and reboot your raspberry Pi.
+<pre class="highlight"><code class="language-bash">dtoverlay=dwc2,dr_mode=host</code></pre></p>
+<h2 id="how-to-enable-fan-automatically">How to enable fan automatically?</h2>
+<p>** Assume that your operating system is Raspberry Pi OS (32bit/64bit) **</p>
+<h3 id="official-fan-setting">Official Fan setting</h3>
+<ul>
+<li>Open a terminal and typing following command:</li>
+</ul>
+<pre class="highlight"><code>sudo raspi-config </code></pre>
+<p>Navigate to <code>Performance Options</code> -&gt; <code>P4 Fan</code> -&gt; <code>Yes</code> -&gt; <code>14</code> -&gt; <code>60</code> -&gt; <code>yes</code> -&gt; <code>finish</code> -&gt; reboot Raspberry Pi.</p>
+<p>The fan is support <code>PWM</code> signal control via <code>GPIO14</code> which is <code>physical pin 12</code>(TXD), it will spinning when the CPU temperature is above <code>60</code> degree.</p>
+<p>and also you can write your code to control the fan via <code>GPIO14</code>, sending <code>PWM</code> signal will trigger the fan spinning.</p>
+<h3 id="control-fan-manually">Control Fan manually</h3>
+<h4 id="demo-code">Demo code</h4>
+<ul>
+<li>Here is a demo code for controlling fan speed by using python script.</li>
+</ul>
+<pre class="highlight"><code class="language-python"> #!/usr/bin/python3
+
+import RPi.GPIO as GPIO
+import time
+import subprocess
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(14, GPIO.OUT)
+pwm = GPIO.PWM(14,100)
+
+print("\nPress Ctrl+C to quit \n")
+dc = 0
+pwm.start(dc)
+
+try:
+    while True:
+        temp = subprocess.getoutput("vcgencmd measure_temp|sed 's/[^0-9.]//g'")
+        if round(float(temp)) &gt;= 45:
+            dc = 100
+            pwm.ChangeDutyCycle(dc)
+            print("CPU Temp:",float(temp)," Fan duty cycle:",dc)
+            time.sleep(180.0)
+        if round(float(temp)) &gt;= 40:
+            dc = 85
+            pwm.ChangeDutyCycle(dc)
+            print("CPU Temp:",float(temp)," Fan duty cycle:",dc)
+            time.sleep(120.0)
+        else:
+            dc = 70
+            pwm.ChangeDutyCycle(dc)
+            print("CPU Temp:",float(temp)," Fan duty cycle:",dc)
+            time.sleep(60.00)
+
+except KeyboardInterrupt:
+    pwm.stop()
+    GPIO.cleanup()
+    print("Ctrl + C pressed -- Ending program")
+</code></pre>
+<p>Then execute it:</p>
+<pre class="highlight"><code>python3 fan_control.py</code></pre>
+<h2 id="how-to-enable-onboard-rtc-module">How to enable onboard RTC module?</h2>
+<blockquote>
+<p><code>NOTE</code>:<br />
+RTC battery sock type: ZH1.25<br />
+The battery dose not include in the package, additional purchase required!!
+* Step 1. Modify /boot/config.txt file and adding following parameter:
+<pre class="highlight"><code class="language-bash">dtoverlay=i2c-rtc,pcf85063a,i2c_csi_dsi,addr=0x51</code></pre>
+Save it and please reboot your Raspberry Pi. </p>
+</blockquote>
+<ul>
+<li>Step 2. Check if RTC module has been recognized by Raspberry Pi.
+Execute following command in a terminal:
+<pre class="highlight"><code class="language-bash">dmesg |grep i2c </code></pre>
+<img alt="DMESG infor" src="../imgs/deskpiminicube/dmesg_infor.png" />
+<pre class="highlight"><code class="language-bash">i2cdetect -y 10 </code></pre><blockquote>
+<p>NOTE: if command not found, please install <code>i2c-tools</code>:
+<pre class="highlight"><code class="language-bash">sudo apt update 
+sudo apt upgrade -y 
+sudo apt -y install i2c-tool</code></pre>
+<img alt="I2C infor1" src="../imgs/deskpiminicube/i2c_rtc_01.png" /></p>
+</blockquote>
+</li>
+<li>
+<p>Step 3. Probe the module <code>rtc-pcf85063</code> and check the kernel module status.
+<pre class="highlight"><code class="language-bash">modprobe rtc-pcf85063
+lsmod |grep rtc </code></pre>
+<img alt="I2C infor2" src="../imgs/deskpiminicube/i2c_rtc_02.png" /></p>
+</li>
+<li>
+<p>Step 4. Setting system date and sychronized system time to Hardware clock time.</p>
+</li>
+</ul>
+<p>** Check RTC time in command line.
+<pre class="highlight"><code class="language-bash">cat /proc/driver/rtc </code></pre></p>
+<p>** Setting system time
+<strong>Syntax</strong>
+<pre class="highlight"><code class="language-bash">date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]</code></pre>
+For example:
+<pre class="highlight"><code class="language-bash">sudo date -s 'tue oct 18 08:50:23 BST 2022'
+or 
+sudo date 053118062023.22 </code></pre>
+It means setting system time to 2023.05.31 18:06:23. </p>
+<p>** Sychronizing system time to HW clock time.
+<pre class="highlight"><code class="language-bash">sudo hwclock -w</code></pre>
+** Check RTC time and system time
+<pre class="highlight"><code class="language-bash">sudo hwclock ; date</code></pre></p>
+<h2 id="faq">FAQ</h2>
+<ul>
+<li>Q: Dose it support NVMe SSD booting? <br />
+A: It has been tested, yes, it supports, but you may need to upgrade eeprom by using rpi-boot from official github repository. </li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../picomate/" class="btn btn-neutral float-right" title="DeskPi PicoMate">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../expansionkit/" class="btn btn-neutral" title="DeskPi Lite Expansion Kit"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../expansionkit/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../picomate/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
