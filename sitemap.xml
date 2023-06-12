@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://wiki.deskpi.com/</loc>
-     <lastmod>2023-06-05</lastmod>
+     <lastmod>2023-06-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://wiki.deskpi.com/deskpi_lite_nas_case/</loc>
+     <lastmod>2023-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://wiki.deskpi.com/expansionkit/</loc>
-     <lastmod>2023-06-05</lastmod>
+     <lastmod>2023-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://wiki.deskpi.com/minipc/</loc>
-     <lastmod>2023-06-05</lastmod>
+     <lastmod>2023-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://wiki.deskpi.com/picomate/</loc>
-     <lastmod>2023-06-05</lastmod>
+     <lastmod>2023-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://wiki.deskpi.com/super6c/</loc>
-     <lastmod>2023-06-05</lastmod>
+     <lastmod>2023-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://wiki.deskpi.com/deskpilite/</loc>
-     <lastmod>2023-06-05</lastmod>
+     <lastmod>2023-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://wiki.deskpi.com/deskpinano/</loc>
-     <lastmod>2023-06-05</lastmod>
+     <lastmod>2023-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://wiki.deskpi.com/deskpipro/</loc>
-     <lastmod>2023-06-05</lastmod>
+     <lastmod>2023-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
