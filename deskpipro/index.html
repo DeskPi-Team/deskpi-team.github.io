@@ -26,7 +26,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
-</head>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -37,16 +42,16 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href=".." class="icon icon-home"> DeskPi Products Wiki</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
+        
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../microcar/">DeskPi MicroCar</a>
                     </li>
                 </ul>
                 <ul>
@@ -258,7 +263,7 @@
 <p>The DeskPi Pro is a hardware kit for converting a standard Raspberry Pi 4 from a naked SBC, with limited storage, into a mini PC complete with a power button, cooling, better ports and, via SATA then USB3, 2.5" or M.2 SATA SSD storage.</p>
 <pre>Note: Support M.2 SATA SSD only, Does not support M.2 NVME SSD </pre>
 <h2 id="purchase">Purchase</h2>
-<p><img alt="shoppingchart" src="../imgs/picomate/shoppingchart.jpg" /> <a href="https://deskpi.com/collections/frontpage">DeskPi Pro</a></p>
+<p><a class="glightbox" href="../imgs/picomate/shoppingchart.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="shoppingchart" src="../imgs/picomate/shoppingchart.jpg" /></a> <a href="https://deskpi.com/collections/frontpage">DeskPi Pro</a></p>
 <h2 id="currently-tested-operating-systems-that-can-support-deskpi-scripts">Currently tested operating systems that can support Deskpi scripts</h2>
 <ul>
 <li>Raspberry Pi OS(32bit) - tested </li>
@@ -415,7 +420,7 @@ configuration file to setup your fan.</p>
 50~65C : 50%  
 65~75C : 75%  
 &gt;75C   : 100%  </code></pre>
-<p><img alt="Example" src="https://raw.githubusercontent.com/DeskPi-Team/deskpi/master/imgs/deskpi-config-snap.jpg" /></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/DeskPi-Team/deskpi/master/imgs/deskpi-config-snap.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Example" src="https://raw.githubusercontent.com/DeskPi-Team/deskpi/master/imgs/deskpi-config-snap.jpg" /></a></p>
 <p>** If you want to change it, just typing :</p>
 <pre class="highlight"><code class="language-bash">deskpi-config</code></pre>
 <p>Select <code>6</code> and then input <code>45</code> and enter, and then input <code>50</code> means setup the fan speed level to <code>50%</code> when CPU temp is above 45 degree it has 4 level to setup.
@@ -561,7 +566,7 @@ Save and close the file. Then run the following command to see if it works.
 <p><pre class="highlight"><code class="language-bash">sudo apt update 
 sudo apt -y install wavemon
 sudo wavemon -i wlan0</code></pre>
-<img alt="Wavemon" src="../imgs/waveontest.jpg" /></p>
+<a class="glightbox" href="../imgs/waveontest.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Wavemon" src="../imgs/waveontest.jpg" /></a></p>
 <ul>
 <li>
 <p>Check if Raspberry Pi can connect to Internet
@@ -681,11 +686,11 @@ sudo reboot</code></pre></li>
 <ul>
 <li>Change Resolution on desktop by click <code>raspberry</code> icon and select the app according to following picture.</li>
 <li>Navigate to Screen Configuration
-<img alt="Resolution1" src="../imgs/resolution1.jpg" /></li>
+<a class="glightbox" href="../imgs/resolution1.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Resolution1" src="../imgs/resolution1.jpg" /></a></li>
 <li>Navigate to <code>configure</code>-&gt; <code>Screens</code> -&gt; <code>HDMI-1</code> or <code>HDMI-2</code> -&gt; <code>Resolution</code> -&gt; Select whatever your Screens Resolution is. 
-<img alt="Resolution2" src="../imgs/resolution2.jpg" /></li>
+<a class="glightbox" href="../imgs/resolution2.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Resolution2" src="../imgs/resolution2.jpg" /></a></li>
 <li>Apply the change.
-<img alt="Resolution3" src="../imgs/resolution3.jpg" /></li>
+<a class="glightbox" href="../imgs/resolution3.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Resolution3" src="../imgs/resolution3.jpg" /></a></li>
 </ul>
 <h3 id="how-to-check-ir-remote">How to check IR remote</h3>
 <ul>
@@ -720,7 +725,7 @@ If you connect HDMI cable to your DeskPi on <code>HDMI0</code> port which is bes
 <h3 id="how-to-change-audio-output">How to change audio output.</h3>
 <ul>
 <li><strong>Right Click</strong> the sound icon on the task bar.
-<img alt="Audio Configure" src="../imgs/audioconfig.jpg" /></li>
+<a class="glightbox" href="../imgs/audioconfig.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Audio Configure" src="../imgs/audioconfig.jpg" /></a></li>
 <li>And select which one you want to output:<br>
 <strong>Analog</strong> - It will change audio output to 3.5mm jack. <br>
 <strong>HDMI-1</strong> - It will change audio output to <code>HDMI0</code>.<br> 
@@ -771,12 +776,11 @@ If you connect HDMI cable to your DeskPi on <code>HDMI0</code> port which is bes
 </div>
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
         };
     </script>
 
-</body>
+<script>const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});</script></body>
 </html>

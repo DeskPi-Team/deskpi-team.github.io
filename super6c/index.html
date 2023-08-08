@@ -26,7 +26,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
-</head>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -37,16 +42,16 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href=".." class="icon icon-home"> DeskPi Products Wiki</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
+        
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../microcar/">DeskPi MicroCar</a>
                     </li>
                 </ul>
                 <ul>
@@ -170,9 +175,9 @@
             <div class="section">
               
                 <h1 id="deskpi-super6c">DeskPi Super6C</h1>
-<p><img alt="super6c" src="../imgs/super6c/super6c-main.jpg" /></p>
+<p><a class="glightbox" href="../imgs/super6c/super6c-main.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="super6c" src="../imgs/super6c/super6c-main.jpg" /></a></p>
 <h2 id="purchase">Purchase</h2>
-<p><img alt="chart" src="../imgs/picomate/shoppingchart.jpg" /> 
+<p><a class="glightbox" href="../imgs/picomate/shoppingchart.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="chart" src="../imgs/picomate/shoppingchart.jpg" /></a> 
 <a href="https://deskpi.com/collections/deskpi-super6c">DeskPi Super6C</a></p>
 <h2 id="description">Description</h2>
 <p>DeskPi Super6C is the Raspberry Pi cluster board a standard size mini-ITX board to be put in a case with up to 6 RPI CM4 Compute Modules.
@@ -207,9 +212,9 @@
 <li>Network-Attached Storage or Distributed Storage System :6 x ARM NAS node or CEPH node</li>
 </ul>
 <h2 id="software">Software</h2>
-<p><img alt="software" src="../imgs/super6c/software.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/software.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="software" src="../imgs/super6c/software.png" /></a></p>
 <h2 id="port-definitions">Port definitions</h2>
-<p><img alt="PortDefinitions" src="../imgs/super6c/portdefinitions.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/portdefinitions.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PortDefinitions" src="../imgs/super6c/portdefinitions.png" /></a></p>
 <ul>
 <li>1 x DC IN +12~24V</li>
 <li>2 x RJ45 Gigabit Ethernet Port 1Gbps</li>
@@ -228,7 +233,7 @@ Model: FJ-SW2025G1904730
 INPUT: 100-240V~50/60Hz 2.0A Max
 OUTPUT：19.0V ≈ 4.73A， 89.87W</li>
 </ul>
-<p><img alt="powersupplyport" src="../imgs/super6c/powersupply.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/powersupply.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="powersupplyport" src="../imgs/super6c/powersupply.png" /></a></p>
 <ul>
 <li>
 <p>NOTE: <code>Please pay attention</code> to the order of starting up, if the order is wrong, you may see sparks at the DC port, so pay special attention here! ! !</p>
@@ -241,33 +246,33 @@ OUTPUT：19.0V ≈ 4.73A， 89.87W</li>
 </li>
 </ul>
 <h2 id="mechanical-drawing">Mechanical Drawing</h2>
-<p><img alt="Mechanical" src="../imgs/super6c/machinical.png" /></p>
-<p><img alt="Mechanical2" src="../imgs/super6c/machinical2.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/machinical.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Mechanical" src="../imgs/super6c/machinical.png" /></a></p>
+<p><a class="glightbox" href="../imgs/super6c/machinical2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Mechanical2" src="../imgs/super6c/machinical2.png" /></a></p>
 <h2 id="block-scheme">Block Scheme</h2>
-<p><img alt="BlockScheme" src="../imgs/super6c/block_sch.jpg" /></p>
+<p><a class="glightbox" href="../imgs/super6c/block_sch.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="BlockScheme" src="../imgs/super6c/block_sch.jpg" /></a></p>
 <h2 id="pin-headers-definitions">Pin Headers definitions</h2>
 <ul>
 <li>CM4 Jumpers Functions</li>
 </ul>
-<p><img alt="CM4Jumpers" src="../imgs/super6c/cm4jumpers.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/cm4jumpers.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="CM4Jumpers" src="../imgs/super6c/cm4jumpers.png" /></a></p>
 <ul>
 <li>LED definitions</li>
 </ul>
-<p><img alt="LED" src="../imgs/super6c/led.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/led.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="LED" src="../imgs/super6c/led.png" /></a></p>
 <ul>
 <li>4-Pin ATX Power Pins definitions</li>
 </ul>
 <p>12V Pin and GND:
-<img alt="ATX" src="../imgs/super6c/atx.png" /></p>
+<a class="glightbox" href="../imgs/super6c/atx.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ATX" src="../imgs/super6c/atx.png" /></a></p>
 <p>Power button and Reset Button
-<img alt="ATX2" src="../imgs/super6c/atx2.png" /></p>
+<a class="glightbox" href="../imgs/super6c/atx2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ATX2" src="../imgs/super6c/atx2.png" /></a></p>
 <p>Distribution of Pins </p>
-<p><img alt="ATX3" src="../imgs/super6c/atx3.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/atx3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ATX3" src="../imgs/super6c/atx3.png" /></a></p>
 <p><strong><em>Note：</em></strong></p>
 <ul>
 <li>J6: If you are using 9pin USB pins, it is more common for motherboards that support Pentium4 or athlon XP chipsets (such as i845D, i845E, SiS 650, etc.) to need to drop the pins.</li>
 </ul>
-<p><img alt="J6Pin" src="../imgs/super6c/J6.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/J6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="J6Pin" src="../imgs/super6c/J6.png" /></a></p>
 <p>If a 10-pin type USB pin is used, such as i815, i815E, i815EP, KT133 and other chipset motherboards, this pin can be reserved, please refer to the motherboard manual for wiring.</p>
 <ul>
 <li>
@@ -280,9 +285,9 @@ OUTPUT：19.0V ≈ 4.73A， 89.87W</li>
 <h2 id="how-to-install-cm4-module">How to install CM4 module</h2>
 <p>Please press the CM4 module onto Super6c mainboard as following picture.<br />
 Attach the CM4 to the board by simply aligning it with the two connectors on the IO board, then give it a good squeeze. It’ll crunch into place and you should be set.</p>
-<p><img alt="cm4install" src="../imgs/super6c/cm4install.jpg" /></p>
+<p><a class="glightbox" href="../imgs/super6c/cm4install.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="cm4install" src="../imgs/super6c/cm4install.jpg" /></a></p>
 <p>and if you have SSD drive, install it as following picture.</p>
-<p><img alt="cm4install2" src="../imgs/super6c/cm4install2.jpg" /></p>
+<p><a class="glightbox" href="../imgs/super6c/cm4install2.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="cm4install2" src="../imgs/super6c/cm4install2.jpg" /></a></p>
 <h2 id="how-to-flash-image-to-emmc-on-cm4-module">How to Flash image to eMMC on CM4 module.</h2>
 <ul>
 <li>Flashing the Compute Module eMMC
@@ -349,7 +354,7 @@ After rpiboot completes, you will see a new device appear; this is commonly /dev
 /dev/sdX2 &lt;- Second partition (Linux Filesystem)</code></pre>
 <p>The /dev/sdX1 and /dev/sdX2 partitions can now be mounted normally.</p>
 <p>Make sure <code>J2 (nRPBOOT)</code> is set to the disabled position and/or nothing is plugged into the USB slave port. Power cycling the board should now result in the Compute Module booting from eMMC.
-<img alt="nRPBOOTJumper" src="../imgs/super6c/jumberj2.png" /></p>
+<a class="glightbox" href="../imgs/super6c/jumberj2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="nRPBOOTJumper" src="../imgs/super6c/jumberj2.png" /></a></p>
 <h2 id="compute-module-4-bootloader">Compute Module 4 Bootloader</h2>
 <p>The default bootloader configuration on CM4 is designed to support bring up and development on a Compute Module 4 IO board and the software version flashed at manufacture may be older than the latest release. For final products please consider:</p>
 <ul>
@@ -398,7 +403,7 @@ sudo cp -r &lt;files&gt;/* &lt;mountpoint&gt;</code></pre>
 <p>After Flash Raspberry Pi OS to eMMC on CM4 module, just power off the system, and one complete, 5 to go, just repeat those step five times. </p>
 <p>If your CM4 Module does not have eMMC on board, that will be easy, just flash Raspberry Pi OS to TF card or SSD drive, and insert them to card slot, fix it with screws. and connect the power supply, and press <code>PWR_BTN</code> button to power them on.</p>
 <p>If your CM4 module has eMMC on board, the SSD drive and TF card can be external mass storage.</p>
-<p><img alt="storage" src="../imgs/super6c/cm4install2.jpg" /></p>
+<p><a class="glightbox" href="../imgs/super6c/cm4install2.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="storage" src="../imgs/super6c/cm4install2.jpg" /></a></p>
 <h2 id="how-to-build-your-own-cluster-and-manage-the-cluster-via-ansible">How to build your own cluster and manage the cluster via Ansible</h2>
 <h3 id="fit-for-cm4-lite-version">Fit for CM4 Lite version</h3>
 <p><strong><em>Note:</em></strong>
@@ -504,27 +509,27 @@ Lets see the version installed using apt in Raspbian.</p>
 <pre class="highlight"><code class="language-bash">sudo apt list ansible
 pip3 install ansible --user</code></pre>
 <p>Installing Ansible using the --user option, will make that the binary will be available directly under your user home, and not in your root bin directory (/bin,/usr/bin..)</p>
-<p><img alt="pathvar" src="../imgs/super6c/pathenv.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/pathenv.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="pathvar" src="../imgs/super6c/pathenv.png" /></a></p>
 <p>For that, I recommend you to add your <code>$user_home/.local/bin</code> to your PATH environment:</p>
-<p><img alt="env" src="../imgs/super6c/env.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/env.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="env" src="../imgs/super6c/env.png" /></a></p>
 <h3 id="ansible-project-configuration">Ansible Project Configuration</h3>
 <p>Now that we have Ansible installed, let’s set some basic configuration.</p>
 <p>Create a directory for our first project where we are going to set the different configuration files and Ansible playbooks
 <pre class="highlight"><code class="language-bash">mkdir Ansible</code></pre></p>
 <p>First file we are going to create, is an Ansible configuration file. This will make sure we are using correct inventory file and some specific options for this project.</p>
 <p>In this case, we will use the inventory file in the local directory and will be connecting to the remote server as root. Additionally, will disable ssh-key check so we can connect to the servers without doing first ssh-key handshake (is a security risk, but will help us to destroy and deploy containers and VMs more rapidly in the future)</p>
-<p><img alt="sshkey" src="../imgs/super6c/sshkey.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/sshkey.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="sshkey" src="../imgs/super6c/sshkey.png" /></a></p>
 <p>Using --version attribute, will allow us to make sure we are suing correct configuration file:</p>
-<p><img alt="version" src="../imgs/super6c/version.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/version.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="version" src="../imgs/super6c/version.png" /></a></p>
 <p>Create the inventory file with the list of hosts </p>
-<p><img alt="host" src="../imgs/super6c/host.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/host.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="host" src="../imgs/super6c/host.png" /></a></p>
 <p>We can list all the hosts from our inventory：</p>
-<p><img alt="inventory" src="../imgs/super6c/inventory.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/inventory.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="inventory" src="../imgs/super6c/inventory.png" /></a></p>
 <p>If we try the command ansible ping we will have errors, since we can not actually connect to our servers using SSH public keys.
 <pre class="highlight"><code class="language-bash">ansible all –m ping</code></pre>
-<img alt="ansibleping" src="../imgs/super6c/ansibleping.png" /></p>
+<a class="glightbox" href="../imgs/super6c/ansibleping.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ansibleping" src="../imgs/super6c/ansibleping.png" /></a></p>
 <p>and before that, we need to create a file called ping.yml. </p>
-<p><img alt="yaml" src="../imgs/super6c/yaml.png" /></p>
+<p><a class="glightbox" href="../imgs/super6c/yaml.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="yaml" src="../imgs/super6c/yaml.png" /></a></p>
 <h2 id="faq">FAQ</h2>
 <ul>
 <li>
@@ -617,12 +622,11 @@ pip3 install ansible --user</code></pre>
 </div>
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
         };
     </script>
 
-</body>
+<script>const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});</script></body>
 </html>

@@ -26,7 +26,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
-</head>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -37,16 +42,16 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href=".." class="icon icon-home"> DeskPi Products Wiki</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
+        
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../microcar/">DeskPi MicroCar</a>
                     </li>
                 </ul>
                 <ul>
@@ -174,9 +179,9 @@
 <li>Mobility: ⭐⭐⭐⭐⭐</li>
 <li>Assemble Difficulty: ⭐</li>
 </ul>
-<p><img alt="DeskPi Mini Cube" src="../imgs/deskpiminicube/DP-0019-1.jpg" /></p>
+<p><a class="glightbox" href="../imgs/deskpiminicube/DP-0019-1.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DeskPi Mini Cube" src="../imgs/deskpiminicube/DP-0019-1.jpg" /></a></p>
 <h2 id="purchase">Purchase</h2>
-<p><img alt="chart" src="../imgs/picomate/shoppingchart.jpg" /></p>
+<p><a class="glightbox" href="../imgs/picomate/shoppingchart.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="chart" src="../imgs/picomate/shoppingchart.jpg" /></a></p>
 <p><a href="https://deskpi.com/products/deskpi-mini-cube-for-raspberry-pi-compute-module-4-cm4?_pos=1&amp;_psq=DeskPi%20Cube&amp;_ss=e&amp;_v=1.0">DeskPi Mini Cube</a></p>
 <h2 id="description">Description</h2>
 <p>DeskPi Mini Cube for Raspberry Pi CM4 is a case with a miniature appearance and extremely portable features.</p>
@@ -205,23 +210,23 @@
 <ul>
 <li>
 <p>Product Outlook 
-<img alt="DeskPi mini cube feature1" src="../imgs/deskpiminicube/DP-0019-1.jpg" /></p>
+<a class="glightbox" href="../imgs/deskpiminicube/DP-0019-1.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DeskPi mini cube feature1" src="../imgs/deskpiminicube/DP-0019-1.jpg" /></a></p>
 </li>
 <li>
 <p>Backside of Mini Cube 
-<img alt="DeskPi mini cube feature2" src="../imgs/deskpiminicube/DP-0019-2.jpg" /></p>
+<a class="glightbox" href="../imgs/deskpiminicube/DP-0019-2.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DeskPi mini cube feature2" src="../imgs/deskpiminicube/DP-0019-2.jpg" /></a></p>
 </li>
 <li>
 <p>Ports Definitions
-<img alt="DeskPi mini cube feature3" src="../imgs/deskpiminicube/DP-0019-3.jpg" /></p>
+<a class="glightbox" href="../imgs/deskpiminicube/DP-0019-3.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DeskPi mini cube feature3" src="../imgs/deskpiminicube/DP-0019-3.jpg" /></a></p>
 </li>
 <li>
 <p>Inside of Mini Cube<br />
-<img alt="DeskPi mini cube feature4" src="../imgs/deskpiminicube/DP-0019-5.jpg" /></p>
+<a class="glightbox" href="../imgs/deskpiminicube/DP-0019-5.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DeskPi mini cube feature4" src="../imgs/deskpiminicube/DP-0019-5.jpg" /></a></p>
 </li>
 <li>
 <p>Dimension
-<img alt="DeskPi mini cube feature5" src="../imgs/deskpiminicube/DP-0019-7.jpg" /></p>
+<a class="glightbox" href="../imgs/deskpiminicube/DP-0019-7.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DeskPi mini cube feature5" src="../imgs/deskpiminicube/DP-0019-7.jpg" /></a></p>
 </li>
 <li>
 <p>IPX antenna specifications</p>
@@ -233,20 +238,20 @@
 <li>Antenna Element Cable: 1.13 Coaxial cable, with plastic coating.</li>
 <li>Impedance: 5Ohm.</li>
 <li>Gain: About 3 dBi.
-<img alt="IPEX1 Antenna" src="../imgs/deskpiminicube/DP-0019-11.jpg" /></li>
+<a class="glightbox" href="../imgs/deskpiminicube/DP-0019-11.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IPEX1 Antenna" src="../imgs/deskpiminicube/DP-0019-11.jpg" /></a></li>
 </ul>
 </li>
 </ul>
 <h3 id="install-ipex-antenna">Install IPEX Antenna</h3>
 <p>Add the antenna as following figure, and then remove the protection film on back of the antenna, and then paste it inside the case. 
-<img alt="Install Antenna" src="../imgs/deskpiminicube/DP-0019-13.jpg" /></p>
+<a class="glightbox" href="../imgs/deskpiminicube/DP-0019-13.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Install Antenna" src="../imgs/deskpiminicube/DP-0019-13.jpg" /></a></p>
 <h2 id="rtc-battery-information">RTC Battery Information</h2>
 <p>ear RTC Battery <code>dose not</code> include in the package, additional purchase required! 
 * Fit for: laptop CMOS Battery, Recommended <code>CR1220 3V</code> with <code>ZH1.25</code> Connector.</p>
 <h2 id="package-includes">Package Includes</h2>
 <ul>
 <li>1 x DeskPi Mini Cube for Raspberry Pi computer module 4
-<img alt="DeskPi mini cube feature6" src="../imgs/deskpiminicube/DP-0019-4.jpg" /></li>
+<a class="glightbox" href="../imgs/deskpiminicube/DP-0019-4.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DeskPi mini cube feature6" src="../imgs/deskpiminicube/DP-0019-4.jpg" /></a></li>
 </ul>
 <h2 id="how-to-assemble-it">How to assemble it</h2>
 <ul>
@@ -265,7 +270,7 @@ and press the Raspberry Pi CM4 module according to following figure, please be w
 <li>Step 3. Fix aluminum heat sink to Raspberry Pi CM4 module with copper pillars.</li>
 </ul>
 <p>Please refer to following figure to assemble it.</p>
-<p><img alt="DeskPi mini cube feature4" src="../imgs/deskpiminicube/DP-0019-6.jpg" /></p>
+<p><a class="glightbox" href="../imgs/deskpiminicube/DP-0019-6.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DeskPi mini cube feature4" src="../imgs/deskpiminicube/DP-0019-6.jpg" /></a></p>
 <h3 id="optional-install-m2-nvme-ssd-m-key-22422240">[Optional] Install M.2 NVME SSD M-KEY 2242/2240.</h3>
 <ol>
 <li>
@@ -279,7 +284,7 @@ and press the Raspberry Pi CM4 module according to following figure, please be w
 </li>
 <li>
 <p>Fix the bottom case with screws.
-<img alt="DIP Switch Details" src="../imgs/deskpiminicube/DP-0019-8.jpg" /></p>
+<a class="glightbox" href="../imgs/deskpiminicube/DP-0019-8.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DIP Switch Details" src="../imgs/deskpiminicube/DP-0019-8.jpg" /></a></p>
 </li>
 </ol>
 <h2 id="functionality-of-power-button">Functionality of power button:</h2>
@@ -295,14 +300,14 @@ and press the Raspberry Pi CM4 module according to following figure, please be w
 Shutdown system in terminal or desktop, and then long press the button to cut off power.</li>
 </ul>
 <h2 id="dip-switch-functionality">DIP Switch Functionality</h2>
-<p><img alt="DIP Switch Details" src="../imgs/deskpiminicube/DP-0019-9.jpg" /></p>
+<p><a class="glightbox" href="../imgs/deskpiminicube/DP-0019-9.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DIP Switch Details" src="../imgs/deskpiminicube/DP-0019-9.jpg" /></a></p>
 <h3 id="dip-switch-pinout">DIP Switch Pinout</h3>
 <ul>
 <li>1 - USB OTG Pull UP</li>
 <li>2 - UNATTENDEND </li>
 <li>3 - EEPROM_nWP  (EEPROM write protection)</li>
 <li>4.- nRPIBOOT  (disable or enable eMMC Boot)
-<img alt="DIP Switch" src="../imgs/deskpiminicube/DP-0019-12.jpg" /></li>
+<a class="glightbox" href="../imgs/deskpiminicube/DP-0019-12.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DIP Switch" src="../imgs/deskpiminicube/DP-0019-12.jpg" /></a></li>
 </ul>
 <p>If you are using Raspberry Pi CM4 with EMMC onboard. please refer to this URL:
 <a href="https://www.raspberrypi.com/documentation/computers/compute-module.html#compute-module-4">How to flash the Compute Module</a> in section <code>“Flashing the Compute Module eMMC”</code> </p>
@@ -379,20 +384,20 @@ Save it and please reboot your Raspberry Pi. </p>
 <li>Step 2. Check if RTC module has been recognized by Raspberry Pi.
 Execute following command in a terminal:
 <pre class="highlight"><code class="language-bash">dmesg |grep i2c </code></pre>
-<img alt="DMESG infor" src="../imgs/deskpiminicube/dmesg_infor.png" />
+<a class="glightbox" href="../imgs/deskpiminicube/dmesg_infor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DMESG infor" src="../imgs/deskpiminicube/dmesg_infor.png" /></a>
 <pre class="highlight"><code class="language-bash">i2cdetect -y 10 </code></pre><blockquote>
 <p>NOTE: if command not found, please install <code>i2c-tools</code>:
 <pre class="highlight"><code class="language-bash">sudo apt update 
 sudo apt upgrade -y 
 sudo apt -y install i2c-tool</code></pre>
-<img alt="I2C infor1" src="../imgs/deskpiminicube/i2c_rtc_01.png" /></p>
+<a class="glightbox" href="../imgs/deskpiminicube/i2c_rtc_01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="I2C infor1" src="../imgs/deskpiminicube/i2c_rtc_01.png" /></a></p>
 </blockquote>
 </li>
 <li>
 <p>Step 3. Probe the module <code>rtc-pcf85063</code> and check the kernel module status.
 <pre class="highlight"><code class="language-bash">modprobe rtc-pcf85063
 lsmod |grep rtc </code></pre>
-<img alt="I2C infor2" src="../imgs/deskpiminicube/i2c_rtc_02.png" /></p>
+<a class="glightbox" href="../imgs/deskpiminicube/i2c_rtc_02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="I2C infor2" src="../imgs/deskpiminicube/i2c_rtc_02.png" /></a></p>
 </li>
 <li>
 <p>Step 4. Setting system date and sychronized system time to Hardware clock time.</p>
@@ -462,12 +467,11 @@ A: It has been tested, yes, it supports, but you may need to upgrade eeprom by u
 </div>
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
         };
     </script>
 
-</body>
+<script>const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});</script></body>
 </html>

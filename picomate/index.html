@@ -26,7 +26,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
-</head>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -37,16 +42,16 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href=".." class="icon icon-home"> DeskPi Products Wiki</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
+        
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../microcar/">DeskPi MicroCar</a>
                     </li>
                 </ul>
                 <ul>
@@ -176,7 +181,7 @@
                 <h1 id="deskpi-picomate-user-manual">DeskPi PicoMate User Manual</h1>
 <h2 id="description">Description</h2>
 <p>DeskPi PicoMate is an all-in-one and versatile prototyping kit designed for Raspberry Pi Pico and Pico W. It includes one expansion dock for Raspberry Pi Pico and Pico W, 12 detachable modules and all in one- piece of PCB design. All modules are pre-wired to the Pico Dock, no soldering and wiring required and out-of-box. Of course, you can also detach the modules and connect them using the cables included in the box. </p>
-<p><img alt="shoppingChart" src="../imgs/picomate/shoppingchart.jpg" />
+<p><a class="glightbox" href="../imgs/picomate/shoppingchart.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="shoppingChart" src="../imgs/picomate/shoppingchart.jpg" /></a>
 <a href="https://deskpi.com/collections/deskpi-picomate">Buy DeskPi PicoMate</a></p>
 <p><a --primary="--primary" class="md-button md-button" href="https://deskpi.com/">Visit DeskPi Official Website</a></p>
 <h2 id="features">Features</h2>
@@ -210,15 +215,15 @@
 <li>1x Micro USB Cable</li>
 </ul>
 <h2 id="pinout-diagram">Pinout Diagram</h2>
-<p><img alt="pinout1" src="../imgs/picomate/pinoutdiagram.png" /></p>
-<p><img alt="pinout2" src="../imgs/picomate/pinoutdiagram2.png" /></p>
+<p><a class="glightbox" href="../imgs/picomate/pinoutdiagram.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="pinout1" src="../imgs/picomate/pinoutdiagram.png" /></a></p>
+<p><a class="glightbox" href="../imgs/picomate/pinoutdiagram2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="pinout2" src="../imgs/picomate/pinoutdiagram2.png" /></a></p>
 <h2 id="getting-start">Getting Start</h2>
 <h3 id="getting-started-with-python">Getting Started with Python</h3>
 <p>The DeskPi PicoMate can be programmed using the popular Python programming language. Raspberry Pi Pico is supported by CircuitPython, which is based on MicroPython, and features unified Python core APIs and a growing list of device libraries and drivers that work with it.</p>
 <p>This section describes how to set up CircuitPython on DeskPi PicoMate. Examples are also provided to help you to get started in a very short time</p>
 <h3 id="installing-circuitpython">Installing CircuitPython</h3>
 <p>Download the <a href="https://circuitpython.org/">official CircuiPython for Raspberry Pi Pico</a>. Choose the latest stable release and then download the .uf2 file.</p>
-<p><img alt="Download .uf2 file" src="../imgs/picomate/picofwdownload.png" /></p>
+<p><a class="glightbox" href="../imgs/picomate/picofwdownload.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Download .uf2 file" src="../imgs/picomate/picofwdownload.png" /></a></p>
 <p>Then go ahead and:</p>
 <ol>
 <li>Push and hold the <code>BOOTSEL</code> button and plug your Pico into the USB port of your computer. Release the <code>BOOTSEL</code> button after your Pico is connected.</li>
@@ -228,27 +233,27 @@
 <h2 id="installing-mu-editor">Installing Mu Editor</h2>
 <p>Mu Editor is a simple Python code editor for beginner programmers. Go to <a href="https://codewith.mu/">Mu Editor Download page</a>, choose your Operational System and follow the instructions.</p>
 <p><a href="https://codewith.mu/">MU Editor</a></p>
-<p><img alt="mu" src="../imgs/picomate/mu.gif" /></p>
+<p><a class="glightbox" href="../imgs/picomate/mu.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="mu" src="../imgs/picomate/mu.gif" /></a></p>
 <p>Once the Mu Editor is installed, open it, go to <code>Mode</code> menu, select <code>CircuitPython</code> and press <code>OK</code>.</p>
-<p><img alt="mu" src="../imgs/picomate/muselect.jpg" />
+<p><a class="glightbox" href="../imgs/picomate/muselect.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="mu" src="../imgs/picomate/muselect.jpg" /></a>
 In the text editor, try some Python code:</p>
 <p><pre class="highlight"><code class="language-python">
 print('Hello, DeskPi PicoMate!')
 </code></pre>
 Select Save on Top Menu. A window will appear. Give the name <code>code.py</code> for your code and save it on the <code>CIRCUITPY</code> drive. Your code will run as soon as the file is done saving.</p>
 <p>The <code>Serial</code> button opens a serial data connection to the Pico. This will result in a new panel between the text editor and Mu s footer, which prints the data from the Pico.</p>
-<p><img alt="mutest" src="../imgs/picomate/mutest.jpg" /></p>
+<p><a class="glightbox" href="../imgs/picomate/mutest.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="mutest" src="../imgs/picomate/mutest.jpg" /></a></p>
 <p>If you need to drop into the CircuitPython REPL you should make sure the panel has keyboard focus (just click it!) and then type <code>CTRL+ C</code>.</p>
 <p>Now that you have the Python prerequisites installed, it is time to explore more examples for the DeskPi PicoMate.</p>
 <h2 id="python-examples">Python Examples</h2>
 <p>This section consists of several example codes. The examples are organized in different levels of codes to demonstrate the Python API usage.</p>
 <h3 id="blink-rgb-led">Blink RGB LED</h3>
 <p>DeskPi PicoMate has a WS2812 RGB LED pre-wired to <code>GP22</code> on the Pico. We can use the <code>NeoPixel</code> library to blink the RGB LED.</p>
-<p><img alt="NeoPixel" src="../imgs/picomate/neopixel.jpg" /></p>
+<p><a class="glightbox" href="../imgs/picomate/neopixel.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="NeoPixel" src="../imgs/picomate/neopixel.jpg" /></a></p>
 <h4 id="breakable-design">Breakable Design</h4>
-<p><img alt="picomate-design" src="../imgs/picomate/DP-0012_Picomate.jpg" /></p>
+<p><a class="glightbox" href="../imgs/picomate/DP-0012_Picomate.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="picomate-design" src="../imgs/picomate/DP-0012_Picomate.jpg" /></a></p>
 <p>Download the NeoPixel library and copy neopixel.py into the CIRCUITPY/lib folder.This should give you the following folder structure:</p>
-<p><img alt="fileStrucure" src="../imgs/picomate/stucture.png" /></p>
+<p><a class="glightbox" href="../imgs/picomate/stucture.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="fileStrucure" src="../imgs/picomate/stucture.png" /></a></p>
 <p>Copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
 <pre class="highlight"><code class="language-python">import time
 import board
@@ -269,7 +274,7 @@ while True:
 <p>Your code will run as soon as the file is done saving. Observe that the RGB LED starts to blink. For more details about the Neopixel API reference, please check out <a href="https://docs.circuitpython.org/projects/neopixel/en/latest/index.html">Read the Docs</a></p>
 <h3 id="button">Button</h3>
 <p>DeskPi PicoMate has a Push Button pre-wired to <code>GP26</code> on the Pico. The example prints a message to the console each time the state of the button changes. When the button is pressed, the input level of <code>GP26</code> will be <code>low</code> (False) level.
-<img alt="button" src="../imgs/picomate/button.jpg" />
+<a class="glightbox" href="../imgs/picomate/button.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="button" src="../imgs/picomate/button.jpg" /></a>
 Copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
 <pre class="highlight"><code class="language-python">import board
 import digitalio
@@ -289,10 +294,10 @@ while True:
         print('Button is ' + ('released' if button.value else 'pressed'))
 </code></pre>
 <p>Press the button and observe the Serial Console, you will see the message printed each time the state of the button changes:</p>
-<p><img alt="button_test" src="../imgs/picomate/button_test.jpg" /></p>
+<p><a class="glightbox" href="../imgs/picomate/button_test.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="button_test" src="../imgs/picomate/button_test.jpg" /></a></p>
 <h3 id="rotary-encoder">Rotary Encoder</h3>
 <p>DeskPi PicoMate has an incremental rotary encoder pre-wired to the Pico, which converts the motion of the switch (clockwise or counterclockwise) into an output signal that can be used to determine what direction the knob is being rotated.</p>
-<p><img alt="rotary_encoder" src="../imgs/picomate/rotary_encoder.png" />
+<p><a class="glightbox" href="../imgs/picomate/rotary_encoder.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="rotary_encoder" src="../imgs/picomate/rotary_encoder.png" /></a>
 The table below shows the connections of each pin of the rotary encoder:</p>
 <table>
 <thead>
@@ -347,10 +352,10 @@ while True:
         print('Switch is ' + ('ON' if switch.value else 'OFF'))
 </code></pre>
 <p>Now, open the Serial Console, then try rotating the knob slowly clockwise or counterclockwise, and try pressing down on the knob.</p>
-<p><img alt="rotary_test" src="../imgs/picomate/rotary_encoder_test.png.jpg" /></p>
+<p><a class="glightbox" href="../imgs/picomate/rotary_encoder_test.png.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="rotary_test" src="../imgs/picomate/rotary_encoder_test.png.jpg" /></a></p>
 <h3 id="buzzer">Buzzer</h3>
 <p>DeskPi PicoMate has a buzzer pre-wired to <code>GP27</code> on the Pico. To control the buzzer from CircuitPython we will use its built in PWM, or pulse-width modulation, signal generation capabilities.</p>
-<p><img alt="buzzer" src="../imgs/picomate/buzzer.png" /></p>
+<p><a class="glightbox" href="../imgs/picomate/buzzer.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="buzzer" src="../imgs/picomate/buzzer.png" /></a></p>
 <p>Copy and paste the following code to the Mu Editor and press Save:</p>
 <p><pre class="highlight"><code class="language-python">import time
 import board 
@@ -380,7 +385,7 @@ while True:
 The music playback will immediately start as soon as the code is done saving. </p>
 <h3 id="096-128x64-oled-display">0.96” 128x64 OLED Display</h3>
 <p>DeskPi PicoMate has a 0.96" 128x64 OLED Display module, which is pre-wired to the Pico using <code>I2C0</code> with the device address <code>0x3C</code>. </p>
-<p><img alt="OLED" src="../imgs/picomate/oled.jpg" />
+<p><a class="glightbox" href="../imgs/picomate/oled.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="OLED" src="../imgs/picomate/oled.jpg" /></a>
 The table below shows the connections of each pin of the OLED:</p>
 <table>
 <thead>
@@ -405,8 +410,8 @@ The table below shows the connections of each pin of the OLED:</p>
 - adafruit_framebuf<br />
 - adafruit_ssd1306 </p>
 <p>Copy the libraries into the CIRCUITPY/lib folder. This should give you the following folder structure:</p>
-<p><img alt="OLEDFile_str" src="../imgs/picomate/oled_file_str.png" />
-<img alt="OLEDFile_str2" src="../imgs/picomate/oled_file_str2.png" /></p>
+<p><a class="glightbox" href="../imgs/picomate/oled_file_str.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="OLEDFile_str" src="../imgs/picomate/oled_file_str.png" /></a>
+<a class="glightbox" href="../imgs/picomate/oled_file_str2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="OLEDFile_str2" src="../imgs/picomate/oled_file_str2.png" /></a></p>
 <p>Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
 <p><pre class="highlight"><code class="language-python">import time
 import board 
@@ -434,7 +439,7 @@ while True:
 Try to change the display text and observe what is printed on the OLED.</p>
 <h3 id="pdm-microphone">PDM Microphone</h3>
 <p>DeskPi PicoMate has a high quality, low power PDM digital output top-ported omni-directional MEMS microphone.</p>
-<p><img alt="PDM microphone" src="../imgs/picomate/PDM_Mic.jpg" /></p>
+<p><a class="glightbox" href="../imgs/picomate/PDM_Mic.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PDM microphone" src="../imgs/picomate/PDM_Mic.jpg" /></a></p>
 <p>The PDM microphone is pre-wired to the Pico. The table below shows the connections of each pin of the PDM microphone:</p>
 <table>
 <thead>
@@ -489,10 +494,10 @@ while True:
     time.sleep(0.1)
 </code></pre>
 On Serial Console, you will see the Normalized RMS value of the audio captured by the Microphone. Try to make some sound. You will see the magnitude changes. You can also use the plotter for data inspection. Press the <code>Plotter</code> button on the top menu.
-<img alt="PDM_MIC_TEST" src="../imgs/picomate/PDM_mic_test.jpg" /></p>
+<a class="glightbox" href="../imgs/picomate/PDM_mic_test.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PDM_MIC_TEST" src="../imgs/picomate/PDM_mic_test.jpg" /></a></p>
 <h3 id="digital-pir-sensor">Digital PIR Sensor</h3>
 <p>DeskPi PicoMate has a Digital PIR sensor pre-wired to <code>GP28</code> on the Pico. The Digital PIR sensor allows you to sense motion, almost used to detect whether a human has moved in or out of the sensors range.</p>
-<p><img alt="PIR_Sensor" src="../imgs/picomate/pirsensor.jpg" /></p>
+<p><a class="glightbox" href="../imgs/picomate/pirsensor.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PIR_Sensor" src="../imgs/picomate/pirsensor.jpg" /></a></p>
 <p>The Digital PIR sensor acts as a digital output. When the sensor is triggered, the input level of <code>GP28</code> will be <code>High</code> (True) Level.</p>
 <p>Copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
 <p><pre class="highlight"><code class="language-python">import board
@@ -515,10 +520,10 @@ while True:
         print('Motion ' + ('detected!' if pir_sensor.value else 'removed!'))
 </code></pre>
 Try moving your body and see messages printed on the Serial Console.</p>
-<p><img alt="PIR_Sensor_test" src="../imgs/picomate/pirsensor_test.jpg" /></p>
+<p><a class="glightbox" href="../imgs/picomate/pirsensor_test.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PIR_Sensor_test" src="../imgs/picomate/pirsensor_test.jpg" /></a></p>
 <h3 id="6-axis-imu-sensor">6-Axis IMU Sensor</h3>
 <p>DeskPi PicoMate has a 6-Axis IMU sensor (LSM6DS3TR-C) featuring a 3D digital accelerometer and a 3D digital gyroscope. The sensor is pre-wired to the Pico using <code>I2C1</code> with the device address <code>0x6A</code>.
-<img alt="IMUSensor" src="../imgs/picomate/imu.jpg" /></p>
+<a class="glightbox" href="../imgs/picomate/imu.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IMUSensor" src="../imgs/picomate/imu.jpg" /></a></p>
 <p>The table below shows the connections of each pin of the sensor:</p>
 <table>
 <thead>
@@ -586,10 +591,10 @@ while True:
 #     time.sleep(0.1)
 </code></pre>
 Press the <code>Plotter</code> button on the top menu, and try moving your board and see the changes in plotter.</p>
-<p><img alt="IMUSensor_test" src="../imgs/picomate/imu_test.jpg" /></p>
+<p><a class="glightbox" href="../imgs/picomate/imu_test.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IMUSensor_test" src="../imgs/picomate/imu_test.jpg" /></a></p>
 <h3 id="3-axis-magnetometer">3-Axis Magnetometer</h3>
 <p>DeskPi PicoMate has a 3-Axis Magnetometer (MMC5603NJ) that can measure magnetic fields surrounding the device. The sensor is pre-wired to the Pico using I2C1 with the device address <code>0x30</code>.</p>
-<p><img alt="3-Axis Magnetometer" src="../imgs/picomate/3xmagnet.jpg" />
+<p><a class="glightbox" href="../imgs/picomate/3xmagnet.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="3-Axis Magnetometer" src="../imgs/picomate/3xmagnet.jpg" /></a>
 The table below shows the connections of each pin of the sensor:</p>
 <table>
 <thead>
@@ -650,11 +655,11 @@ while True:
     time.sleep(0.1)
 </code></pre>
 Press the <code>Plotter</code> button on the top menu, and try moving your board and see the changes in plotter.
-<img alt="3-Axis Magnetometer test" src="../imgs/picomate/3xmagnet_test.jpg" /></p>
+<a class="glightbox" href="../imgs/picomate/3xmagnet_test.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="3-Axis Magnetometer test" src="../imgs/picomate/3xmagnet_test.jpg" /></a></p>
 <h3 id="digital-optical-sensor">Digital Optical Sensor</h3>
 <p>DeskPi PicoMate has a Digital Optical Sensor (LTR-381RGB-01) that integrates an ambient light sensor (ALS) and a color sensor (CS). With the advanced RGB color sensor, this sensor converts light (Red, Green, Blue, and IR) intensity to a digital output signal capable of direct I2C interface. The ALS provides a linear response over a wide dynamic range, which is well suited to applications under very low or bright ambient brightness.</p>
 <p>The sensor is pre-wired to the Pico using I2C1 with the device address <code>0x53</code>.</p>
-<p><img alt="Digital Optical Sensor" src="../imgs/picomate/DOSensor.jpg" /></p>
+<p><a class="glightbox" href="../imgs/picomate/DOSensor.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Digital Optical Sensor" src="../imgs/picomate/DOSensor.jpg" /></a></p>
 <p>The table below shows the connections of each pin of the sensor:</p>
 <table>
 <thead>
@@ -713,10 +718,10 @@ while True:
     time.sleep(0.5)
 </code></pre>
 On Serial Console, you will see the calculated lux of ambient light. Try to lit up or dim the sensor. You will see the value changes. You can also use the plotter for raw data inspection. Press the Plotter button on the top menu.</p>
-<p><img alt="Digital Optical Sensor test" src="../imgs/picomate/DoSensor_test.jpg" /></p>
+<p><a class="glightbox" href="../imgs/picomate/DoSensor_test.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Digital Optical Sensor test" src="../imgs/picomate/DoSensor_test.jpg" /></a></p>
 <h3 id="temperature-humidity-sensor">Temperature &amp; Humidity Sensor</h3>
 <p>DeskPi PicoMate has a temperature and humidity sensor (SHT30-DIS), which is pre-wired to the Pico using I2C1 with the device address <code>0x44</code>.</p>
-<p><img alt="THS" src="../imgs/picomate/DHT12.png" /></p>
+<p><a class="glightbox" href="../imgs/picomate/DHT12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="THS" src="../imgs/picomate/DHT12.png" /></a></p>
 <p>The table below shows the connections of each pin of the sensor:</p>
 <table>
 <thead>
@@ -783,7 +788,7 @@ while True:
         print("Sensor Heater status =", sht_sensor.heater)
 </code></pre>
 On Serial Console, you will see the temperature and humidity printed every <code>2s</code>.</p>
-<p><img alt="THS test" src="../imgs/picomate/DHT12_test.jpg" /></p>
+<p><a class="glightbox" href="../imgs/picomate/DHT12_test.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="THS test" src="../imgs/picomate/DHT12_test.jpg" /></a></p>
 <h2 id="libraries-download">Libraries download</h2>
 <ul>
 <li>Firmware Download: <a href="../attachments/adafruit-circuitpython-raspberry_pi_pico-en_US-7.3.3.uf2">firmware</a></li>
@@ -795,7 +800,7 @@ On Serial Console, you will see the temperature and humidity printed every <code
   A: Yes, if you want to use the latest version of the libraries.</li>
 </ul>
 <h2 id="appendix-a-deskpi-picomate-pinout-diagram">Appendix A: DeskPi PicoMate Pinout Diagram</h2>
-<p><img alt="DeskPi PicoMate Pinout Diagram" src="../imgs/picomate/picomatediagram.png" /></p>
+<p><a class="glightbox" href="../imgs/picomate/picomatediagram.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DeskPi PicoMate Pinout Diagram" src="../imgs/picomate/picomatediagram.png" /></a></p>
               
             </div>
           </div>
@@ -841,12 +846,11 @@ On Serial Console, you will see the temperature and humidity printed every <code
 </div>
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
         };
     </script>
 
-</body>
+<script>const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});</script></body>
 </html>

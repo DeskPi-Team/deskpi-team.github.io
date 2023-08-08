@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://wiki.deskpi.com/microcar/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>DeskPi MicroCar - DeskPi Products Wiki</title>
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "DeskPi MicroCar";
+    var mkdocs_page_input_path = "microcar.md";
+    var mkdocs_page_url = "/microcar/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> DeskPi Products Wiki</a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">DeskPi MicroCar</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#revision-history">Revision History</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-features">Key Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#whats-included">What’s Included</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pinout-diagram">Pinout Diagram</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#assembly-instructions">Assembly Instructions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getting-started-with-microbit-and-makecode">Getting Started with Micro:bit and Makecode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#individual-module-examples">Individual Module Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#hex-file-and-diagram-download">Hex File and Diagram Download</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rgb-leds">RGB LEDs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#oled-display">OLED Display</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#volume-detection">Volume Detection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#optical-sensors">Optical Sensors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#button">Button</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#grayscale">Grayscale</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ultrasonic">Ultrasonic</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ir-receiver">IR Receiver</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#motors">Motors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#interesting-integrated-application">Interesting integrated application</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#obstacle-avoidance-car">Obstacle Avoidance Car</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#light-catching-car">Light-catching Car</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#remote-control-car">Remote Control Car</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#line-follower-car">Line follower Car</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#concluding-remarks">Concluding Remarks</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../deskpi_lite_nas_case/">DeskPi Lite NAS Case</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../expansionkit/">DeskPi Lite Expansion Kit</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../deskpi_lite_for_3b/">DeskPi Lite For Raspberry Pi 3B/3B+</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minipc/">DeskPi Mini PC</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../picomate/">DeskPi PicoMate</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../super6c/">DeskPi Super6C</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../deskpilite/">DeskPi Lite</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../deskpinano/">DeskPi Nano</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../deskpipro/">DeskPi Pro</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">DeskPi Products Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>DeskPi MicroCar</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="deskpi-microcar">DeskPi MicroCar</h1>
+<p><a class="glightbox" href="../imgs/microcar/DP-0021-01.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DP-0021-01" src="../imgs/microcar/DP-0021-01.jpg" /></a></p>
+<h2 id="revision-history">Revision History</h2>
+<ul>
+<li>Date  Version Description</li>
+<li>July 4, 2023  V1.0    Initial release</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>DeskPi MicroCar is a multi-functional and multi-purpose intelligent cart, Based on microbit. 
+it has on-board motors, ultrasonic, and other sensors, programmed and controlled by Makecode, adoption of graphical programming language. This car especially suitable for students with zero or weak programming fundamentals. This car contains the introduction of the use of independent modules on the trolley and the introduction of comprehensive application cases, first learn the basics, and then comprehensive application, step by step, to enhance the students' hands-on and programming capabilities.</p>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li>Designed for Microbit</li>
+<li>All modules are pre-wired</li>
+<li>9 types easy-to-use modules</li>
+<li>4 WS2812 RGB leds</li>
+<li>0.96’’ 128x64 OLED Display</li>
+<li>Volume detection</li>
+<li>2 Optical sensors</li>
+<li>2 Programmable keys</li>
+<li>2 Grayscale sensors</li>
+<li>Ultrasonic</li>
+<li>IR receiver</li>
+<li>2 Motors</li>
+<li>Powered by 3 x #7 1.5V batteries, separate power control switch</li>
+<li>2 servo expansion ports</li>
+<li>with 4 x M3 structural extension threaded holes</li>
+</ul>
+<h2 id="whats-included">What’s Included</h2>
+<ul>
+<li>1 x Micro:bit</li>
+<li>1 x DeskPi MicroCar</li>
+<li>1 x OLED Desplay</li>
+<li>1 x Utrasonic Sensor</li>
+<li>1 x Remote Control</li>
+<li>1 x Gimbal</li>
+<li>2 x Wheels</li>
+<li>2 x Motor Mounting Brackets</li>
+<li>10 x M3*5 Bolts</li>
+<li>1 x Micro USB Cable</li>
+</ul>
+<h2 id="pinout-diagram">Pinout Diagram</h2>
+<p><a class="glightbox" href="../imgs/microcar/DP-0021-06.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="pinout_diagram" src="../imgs/microcar/DP-0021-06.jpg" /></a></p>
+<h2 id="assembly-instructions">Assembly Instructions</h2>
+<p>a)  Using 4 x M3*5 Bolts to fix the 2 x Motor Mounting Brackets
+<a class="glightbox" href="../imgs/microcar/step1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="assemble01" src="../imgs/microcar/step1.png" /></a>
+b)  Fixing of two wheels on the axle
+<a class="glightbox" href="../imgs/microcar/step2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="assemble02" src="../imgs/microcar/step2.png" /></a>
+c)  Using 2 x M3x5 Bolts to fix the Gimbal
+<a class="glightbox" href="../imgs/microcar/step3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="assemble02" src="../imgs/microcar/step3.png" /></a></p>
+<h2 id="getting-started-with-microbit-and-makecode">Getting Started with Micro:bit and Makecode</h2>
+<p>Micro:bit is a microcontroller designed by the British BBC with ARM architecture. It has many on-board sensors, such as bluetooth, accelerometer, electronic compass, three buttons, 5 × 5 LED Dot Matrix Screen. It’s mainly used for youth programming education.
+<a class="glightbox" href="../imgs/microcar/microbit.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="microbit" src="../imgs/microcar/microbit.png" /></a>
+MakeCode is the official platform for micro:bit, enabling easy coding for beginners and advanced users. Create interactive projects, games, and more with its user-friendly drag-and-drop or Python interface. The possibilities are limitless! 
+<a class="glightbox" href="../imgs/microcar/makecode.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="makecode" src="../imgs/microcar/makecode.png" /></a></p>
+<h2 id="individual-module-examples">Individual Module Examples</h2>
+<p>This section contains of several example codes. 
+These examples illustrate the use of each module on MicroCar. Mastering the use of individual modules, so we can achieve better integrated applications. In this part, we need to make sure that the Micro:bit is always plugged into the female socket.
+<a class="glightbox" href="../imgs/microcar/installmicrobit.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="installmicrobit" src="../imgs/microcar/installmicrobit.png" /></a></p>
+<p>Open this address https://makecode.microbit.org/ , and start to code!</p>
+<h3 id="hex-file-and-diagram-download">Hex File and Diagram Download</h3>
+<p>There are two zipped files which contains all demo codes and diagram pictures.
+Download by click following items:
+<br>
+* <a href="../attachments/Individual%20Module.zip" individual_module="individual_module">Individual Module</a> <br>
+* <a href="../attachments/integrated%20application.zip" integrated_application="integrated_application">Integrated Application</a></p>
+<p>or you can visit <a class="glightbox" href="../imgs/microcar/github_logo.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub" src="../imgs/microcar/github_logo.png" width="6%" /></a>
+GitHub repository by clicking Here: <a href="https://github.com/DeskPi-Team/microcar">MicroCar</a>
+<br></p>
+<h3 id="rgb-leds">RGB LEDs</h3>
+<p>DeskPi MicroCar has four WS2812 RGB LEDs pre-wired to Pin6 on the Miro:bit. n Extensions  module, enter neopixel and select neopixel module.
+<a class="glightbox" href="../imgs/microcar/RGB.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="RGB1" src="../imgs/microcar/RGB.png" /></a>
+<a class="glightbox" href="../imgs/microcar/microcar01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="microcar01" src="../imgs/microcar/microcar01.png" /></a>
+<a class="glightbox" href="../imgs/microcar/microcar02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="microcar02" src="../imgs/microcar/microcar02.png" /></a> { width=80% }
+Following the code below, you can modify the color of the LEDs.</p>
+<p>Note: In this example, you need to make sure that the <code>led enable</code> is <code>false</code>.</p>
+<p><a class="glightbox" href="../imgs/microcar/microcar03.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="microcar03" src="../imgs/microcar/microcar03.png" /></a></p>
+<p>Using the USB connection cable, connect Micro:bit to your computer, Refresh the page and it will connect automatically. Click download, and when it's done, you'll see the light-up effect.</p>
+<ul>
+<li>Note: 
+If it’s not connect automatically, try click <a class="glightbox" href="../imgs/microcar/microcar04.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="microcar04" src="../imgs/microcar/microcar04.png" /></a> and choose the first options to connect.
+In this example, you need to make sure that the lattice screen is disable(Using RGB requires).</li>
+</ul>
+<h3 id="oled-display">OLED Display</h3>
+<p>DeskPi MicroCar has a 128x64 OLED Display. Plug it into the IIC interface. 
+In Extensions  module, enter OLED and select <code>OLED12864_I2C</code> module.
+<a class="glightbox" href="../imgs/microcar/OLED.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="oled" src="../imgs/microcar/OLED.png" /></a>
+<a class="glightbox" href="../imgs/microcar/oled01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="oled1" src="../imgs/microcar/oled01.png" width="80%" /></a></p>
+<p>Following the code below, You can write the characters you want to display. Download the program and your word will be displayed.</p>
+<ul>
+<li>Note:
+In this example, you need to make sure that the <code>led enable</code> is <code>false</code>(Using OLED requires).</li>
+</ul>
+<p><a class="glightbox" href="../imgs/microcar/oled02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="oled2" src="../imgs/microcar/oled02.png" width="80%" /></a></p>
+<h3 id="volume-detection">Volume Detection</h3>
+<p>DeskPi MicroCar has one volume detection sensor pre-wired to <code>Pin3</code> on the Miro:bit.  Using OLED display to show it’s readouts.
+<a class="glightbox" href="../imgs/microcar/volume.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="volume" src="../imgs/microcar/volume.png" /></a>
+Following the code below. <code>Download</code> the program and speak to the volume sensor and you’ll see the the changing numbers on the display.</p>
+<p><a class="glightbox" href="../imgs/microcar/volume01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="volume01" src="../imgs/microcar/volume01.png" width="60%" /></a></p>
+<h3 id="optical-sensors">Optical Sensors</h3>
+<p>DeskPi MicroCar has two opetical sensors pre-wired to <code>Pin0</code> for the right one and  Pin4 for the left one.  Using OLED display to show it’s readouts.
+<a class="glightbox" href="../imgs/microcar/photoresistor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="photo" src="../imgs/microcar/photoresistor.png" /></a>
+Following the code below. <code>Download</code> the program and using the light exposure sensors, you’ll see the the changing numbers on the OLED.</p>
+<p>Note: 
+In this example, you need to make sure that the led enable is false(Using opetical requires).
+<a class="glightbox" href="../imgs/microcar/photo01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="photo01" src="../imgs/microcar/photo01.png" /></a></p>
+<h3 id="button">Button</h3>
+<p>DeskPi MicroCar has two push buttons pre-wired to <code>Pin5</code> for the right one and  Pin11 for the left one.  Using OLED display to show it’s readouts.
+<a class="glightbox" href="../imgs/microcar/button.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="button" src="../imgs/microcar/button.png" /></a></p>
+<p>Following the code below. Download the program and pushing buttons, you’ll see the the changing numbers on the OLED, finding out what state is “0” or “1”.
+<a class="glightbox" href="../imgs/microcar/button01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="button01" src="../imgs/microcar/button01.png" /></a></p>
+<h3 id="grayscale">Grayscale</h3>
+<p>DeskPi MicroCar has two grayscale Sensors pre-wired to <code>Pin2</code> for the right one and  Pin1 for the left one.  Using OLED display to show it’s readouts.
+<a class="glightbox" href="../imgs/microcar/tracking.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Grayscale" src="../imgs/microcar/tracking.png" /></a></p>
+<p>Following the code below. Download the program, placing the sensor on a black or white plane, you’ll see the the changing numbers on the OLED, finding out what are the readings on the different colors.
+<a class="glightbox" href="../imgs/microcar/tracking01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Grayscale01" src="../imgs/microcar/tracking01.png" /></a></p>
+<h3 id="ultrasonic">Ultrasonic</h3>
+<p>DeskPi MicroCar has a ultrasonic sensor pre-wired to <code>Pin9</code> for <code>Echo pin</code> and  <code>Pin12</code> for the <code>Trig pin</code>. Plug it into the Ultrasonic interface. In Extensions module, enter HC-SR04 and select makerbit-ultrasonic module, OELD module is also needed.
+<a class="glightbox" href="../imgs/microcar/ultrasonic.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Ultrasonic" src="../imgs/microcar/ultrasonic.png" /></a>
+<a class="glightbox" href="../imgs/microcar/ultrasonic01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Ultrasonic01" src="../imgs/microcar/ultrasonic01.png" /></a></p>
+<p>Following the code below. Download the program, placing the sensor face objects at different distances. You’ll see the the changing numbers on the OLED, and the numbers means the distance between ultrasonic sensor and the objesct.
+<a class="glightbox" href="../imgs/microcar/ultrasonic02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Ultrasonic02" src="../imgs/microcar/ultrasonic02.png" /></a></p>
+<h3 id="ir-receiver">IR Receiver</h3>
+<p>DeskPi MicroCar has a IR receiver module pre-wired to <code>Pin7</code>.
+In Extensions module, enter IR and select <code>makerbit-ir-receiver module</code>, OELD module is also needed.
+The IR Receiver accepts key commands from the remote control.
+<a class="glightbox" href="../imgs/microcar/IR.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IR" src="../imgs/microcar/IR.png" /></a>
+<a class="glightbox" href="../imgs/microcar/IR01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IR01" src="../imgs/microcar/IR01.png" /></a></p>
+<p>Following the code below. <code>Download</code> the program, press different buttons against the IR Receiver and watch the code on the OLED, the code’s type is “0x00+6-bit character”，
+such as the <a class="glightbox" href="../imgs/microcar/IR02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IR02" src="../imgs/microcar/IR02.png" width="4%" /></a>button’s code is “0x00FFA25D”. 
+<a class="glightbox" href="../imgs/microcar/IR03.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IR03" src="../imgs/microcar/IR03.png" /></a></p>
+<h3 id="motors">Motors</h3>
+<p>DeskPi MicroCar has two motors, There are 2 signal wires for each motor, see the table below for details. The speed and direction of rotation of each motor can be programmed.
+<a class="glightbox" href="../imgs/microcar/motor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Motor" src="../imgs/microcar/motor.png" /></a></p>
+<p><a class="glightbox" href="../imgs/microcar/motorpin.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Motor01" src="../imgs/microcar/motorpin.png" /></a></p>
+<p>Following the code below. <code>Download</code> the program, left motor runs, change the difference of <code>Pin13</code> and <code>Pin14</code>. The larger the difference, the faster the speed. Simply swap the values of the them to achieve rotation in the opposite direction. The right motor is just like this.</p>
+<p><a class="glightbox" href="../imgs/microcar/motor02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Motor02" src="../imgs/microcar/motor02.png" /></a></p>
+<h3 id="interesting-integrated-application">Interesting integrated application</h3>
+<h4 id="obstacle-avoidance-car">Obstacle Avoidance Car</h4>
+<p>We can use ultrasonic to make a car that can automatically avoid obstacles, when there is no obstacle in front, the car moves forward, when there is an obstacle at a certain distance in front, the car decelerates, and when the obstacle distance is particularly close, the car settles down and rotates to the left/right for a certain distance and repeats the detection.</p>
+<p><a class="glightbox" href="../imgs/microcar/obstacle_avoidance_car.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Obstacle-Avoidance-Car" src="../imgs/microcar/obstacle_avoidance_car.png" /></a></p>
+<h4 id="light-catching-car">Light-catching Car</h4>
+<p>There two Optical Sensors on the Deskpi MicroCar, we can use that to control movement of the car.
+If the left optical readouts is larger than the right’s, the car turn left. If the both are small than a number, the car move forward. If the both are larger than a number, the car move backward.</p>
+<blockquote>
+<p>Note: 
+    We need to get the different readouts of the two opticals in the normal lights, in this example, the left readout is 50 and the right one is 100.</p>
+</blockquote>
+<p><a class="glightbox" href="../imgs/microcar/light_catching_car.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Light-catching-car" src="../imgs/microcar/light_catching_car.png" /></a></p>
+<h4 id="remote-control-car">Remote Control Car</h4>
+<p>DeskPi MicroCar has a remote control, and it can be used to control the car’s moving! we choose several buttons to control the car.
+Button on the remote control code Funtion:</p>
+<p><a class="glightbox" href="../imgs/microcar/Remote_control_car.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Remote-Control-car" src="../imgs/microcar/Remote_control_car.png" /></a></p>
+<h4 id="line-follower-car">Line follower Car</h4>
+<p>DeskPi MicroCar’s two grayscale Sensors makes it can follow  a line to run, the readouts on dark areas is smaller than light areas. If the two sensors’s readout are all very large, that means they are on the line, the car move forward, if the left’s readout is smaller, that means the car need to move rigth, otherwise move left.</p>
+<p><a class="glightbox" href="../imgs/microcar/line_follower_car.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Line-follower-car" src="../imgs/microcar/line_follower_car.png" /></a></p>
+<p>We can use dark-colored tape on the light-colored smooth ground or tabletop to stick out a track and run the car on it, it should be noted that the width of the tape should be between 2.5cm-3cm, and the track's can't have right-angled bends, and the bends should have a certain curvature.</p>
+<h3 id="concluding-remarks">Concluding Remarks</h3>
+<p>Congratulations on completing the learning of the DeskPi MicroCar, this manul gives the basic application examples and simple combination of applications, you can again based on the development of more and more interesting gameplay, such as adding sound and light effects, adding speed changes, etc., enjoy the design!</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../deskpi_lite_nas_case/" class="btn btn-neutral float-right" title="DeskPi Lite NAS Case">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../deskpi_lite_nas_case/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+<script>const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});</script></body>
+</html>
