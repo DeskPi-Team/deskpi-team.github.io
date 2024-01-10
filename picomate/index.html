@@ -259,7 +259,8 @@ Select Save on Top Menu. A window will appear. Give the name <code>code.py</code
 <p>Download the NeoPixel library and copy neopixel.py into the CIRCUITPY/lib folder.This should give you the following folder structure:</p>
 <p><a class="glightbox" href="../imgs/picomate/stucture.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="fileStrucure" src="../imgs/picomate/stucture.png" /></a></p>
 <p>Copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<pre class="highlight"><code class="language-python">import time
+<pre class="highlight"><code class="language-python">
+import time
 import board
 import neopixel
 
@@ -273,14 +274,15 @@ pixels = neopixel.NeoPixel(board.GP22, 1)
 
 while True:
     for color in COLORS:
-        pixels[0] = COLORS
+        pixels[0] = color
         time.sleep(1)</code></pre>
 <p>Your code will run as soon as the file is done saving. Observe that the RGB LED starts to blink. For more details about the Neopixel API reference, please check out <a href="https://docs.circuitpython.org/projects/neopixel/en/latest/index.html">Read the Docs</a></p>
 <h3 id="button">Button</h3>
 <p>DeskPi PicoMate has a Push Button pre-wired to <code>GP26</code> on the Pico. The example prints a message to the console each time the state of the button changes. When the button is pressed, the input level of <code>GP26</code> will be <code>low</code> (False) level.
 <a class="glightbox" href="../imgs/picomate/button.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="button" src="../imgs/picomate/button.jpg" /></a>
 Copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<pre class="highlight"><code class="language-python">import board
+<pre class="highlight"><code class="language-python">
+import board
 import digitalio
 
 # Button
@@ -326,7 +328,9 @@ The table below shows the connections of each pin of the rotary encoder:</p>
 </tbody>
 </table>
 <p>Copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<pre class="highlight"><code class="language-python">import rotaryio 
+<pre class="highlight"><code class="language-python">
+  
+import rotaryio 
 import board 
 import digitalio
 
@@ -361,7 +365,9 @@ while True:
 <p>DeskPi PicoMate has a buzzer pre-wired to <code>GP27</code> on the Pico. To control the buzzer from CircuitPython we will use its built in PWM, or pulse-width modulation, signal generation capabilities.</p>
 <p><a class="glightbox" href="../imgs/picomate/buzzer.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="buzzer" src="../imgs/picomate/buzzer.png" /></a></p>
 <p>Copy and paste the following code to the Mu Editor and press Save:</p>
-<p><pre class="highlight"><code class="language-python">import time
+<p><pre class="highlight"><code class="language-python">
+
+import time
 import board 
 import pwmio
 
@@ -383,7 +389,7 @@ buzzer.duty_cycle = 32768
 while True:
     for note in TONE_FREQ:
         if note:
-            buzzer.frequency = notes
+            buzzer.frequency = note
         time.sleep(0.1)
 </code></pre>
 The music playback will immediately start as soon as the code is done saving. </p>
@@ -417,7 +423,9 @@ The table below shows the connections of each pin of the OLED:</p>
 <p><a class="glightbox" href="../imgs/picomate/oled_file_str.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="OLEDFile_str" src="../imgs/picomate/oled_file_str.png" /></a>
 <a class="glightbox" href="../imgs/picomate/oled_file_str2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="OLEDFile_str2" src="../imgs/picomate/oled_file_str2.png" /></a></p>
 <p>Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<p><pre class="highlight"><code class="language-python">import time
+<p><pre class="highlight"><code class="language-python">
+
+import time
 import board 
 import busio
 from adafruit_ssd1306 import SSD1306_I2C
@@ -465,7 +473,9 @@ Try to change the display text and observe what is printed on the OLED.</p>
 </table>
 <p>As PDMIn is built into CircuitPython, no separate libraries are necessary for this example! </p>
 <p>Copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<p><pre class="highlight"><code class="language-python">import time 
+<p><pre class="highlight"><code class="language-python">
+
+import time 
 import array 
 import math 
 import board 
@@ -504,7 +514,9 @@ On Serial Console, you will see the Normalized RMS value of the audio captured b
 <p><a class="glightbox" href="../imgs/picomate/pirsensor.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PIR_Sensor" src="../imgs/picomate/pirsensor.jpg" /></a></p>
 <p>The Digital PIR sensor acts as a digital output. When the sensor is triggered, the input level of <code>GP28</code> will be <code>High</code> (True) Level.</p>
 <p>Copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<p><pre class="highlight"><code class="language-python">import board
+<p><pre class="highlight"><code class="language-python">
+  
+import board
 import digitalio
 
 
@@ -572,7 +584,9 @@ Try moving your body and see messages printed on the Serial Console.</p>
     ├── i2c_struct.py
     └── i2c_struct_array.py</code></pre>
 Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<p><pre class="highlight"><code class="language-python">import time 
+<p><pre class="highlight"><code class="language-python">
+  
+import time 
 import board 
 import busio
 from adafruit_lsm6ds.lsm6ds3trc 
@@ -637,7 +651,9 @@ CIRCUITPY/
         ├── i2c_struct.py
         └── i2c_struct_array.py</code></pre>
 Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<p><pre class="highlight"><code class="language-python">import time 
+<p><pre class="highlight"><code class="language-python">
+  
+import time 
 import board 
 import busio
 from adafruit_mmc56x3 import MMC5603
@@ -702,7 +718,9 @@ Press the <code>Plotter</code> button on the top menu, and try moving your board
     └── ltr381rgb.py
 </code></pre>
 Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<p><pre class="highlight"><code class="language-python">import time 
+<p><pre class="highlight"><code class="language-python">
+  
+import time 
 import board 
 import busio
 from ltr381rgb import LTR381RGB
@@ -763,7 +781,9 @@ On Serial Console, you will see the calculated lux of ambient light. Try to lit 
 │   └── i2c_struct_array.py
 └── adafruit_sht31d.py</code></pre>
 Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<p><pre class="highlight"><code class="language-python">import time 
+<p><pre class="highlight"><code class="language-python">
+  
+import time 
 import board 
 import busio
 from adafruit_sht31d import SHT31D
