@@ -51,6 +51,10 @@
                     </li>
                 </ul>
                 <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../rackmate/">DeskPi RackMate T1</a>
+                    </li>
+                </ul>
+                <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../microcar/">DeskPi MicroCar</a>
                     </li>
                 </ul>
@@ -259,8 +263,7 @@ Select Save on Top Menu. A window will appear. Give the name <code>code.py</code
 <p>Download the NeoPixel library and copy neopixel.py into the CIRCUITPY/lib folder.This should give you the following folder structure:</p>
 <p><a class="glightbox" href="../imgs/picomate/stucture.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="fileStrucure" src="../imgs/picomate/stucture.png" /></a></p>
 <p>Copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<pre class="highlight"><code class="language-python">
-import time
+<pre class="highlight"><code class="language-python">import time
 import board
 import neopixel
 
@@ -280,9 +283,9 @@ while True:
 <h3 id="button">Button</h3>
 <p>DeskPi PicoMate has a Push Button pre-wired to <code>GP26</code> on the Pico. The example prints a message to the console each time the state of the button changes. When the button is pressed, the input level of <code>GP26</code> will be <code>low</code> (False) level.
 <a class="glightbox" href="../imgs/picomate/button.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="button" src="../imgs/picomate/button.jpg" /></a>
-Copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<pre class="highlight"><code class="language-python">
-import board
+Copy and paste the following code to the Mu Editor and press <code>Save</code>:
+<br></p>
+<pre class="highlight"><code class="language-python">import board
 import digitalio
 
 # Button
@@ -329,7 +332,6 @@ The table below shows the connections of each pin of the rotary encoder:</p>
 </table>
 <p>Copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
 <pre class="highlight"><code class="language-python">
-  
 import rotaryio 
 import board 
 import digitalio
@@ -365,13 +367,14 @@ while True:
 <p>DeskPi PicoMate has a buzzer pre-wired to <code>GP27</code> on the Pico. To control the buzzer from CircuitPython we will use its built in PWM, or pulse-width modulation, signal generation capabilities.</p>
 <p><a class="glightbox" href="../imgs/picomate/buzzer.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="buzzer" src="../imgs/picomate/buzzer.png" /></a></p>
 <p>Copy and paste the following code to the Mu Editor and press Save:</p>
-<p><pre class="highlight"><code class="language-python">
-
+<pre class="highlight"><code class="language-python">
 import time
 import board 
 import pwmio
 
-# Define a list of tones/music notes to play. TONE_FREQ = [
+# Define a list of tones/music notes to play. 
+
+TONE_FREQ = [
     1047,   1047,   1568,   1568,   1760,   1760,   1568,   0,
     1397,   1397,   1319,   1319,   1175,   1175,   1047,   0,
     1568,   1568,   1397,   1397,   1319,   1319,   1175,   0,
@@ -392,7 +395,7 @@ while True:
             buzzer.frequency = note
         time.sleep(0.1)
 </code></pre>
-The music playback will immediately start as soon as the code is done saving. </p>
+<p>The music playback will immediately start as soon as the code is done saving. </p>
 <h3 id="096-128x64-oled-display">0.96” 128x64 OLED Display</h3>
 <p>DeskPi PicoMate has a 0.96" 128x64 OLED Display module, which is pre-wired to the Pico using <code>I2C0</code> with the device address <code>0x3C</code>. </p>
 <p><a class="glightbox" href="../imgs/picomate/oled.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="OLED" src="../imgs/picomate/oled.jpg" /></a>
@@ -415,16 +418,18 @@ The table below shows the connections of each pin of the OLED:</p>
 </tr>
 </tbody>
 </table>
-<p>Before we can use the display module, we need the following modules installed:
-- adafruit_register 
-- adafruit_framebuf<br />
-- adafruit_ssd1306 </p>
+<p>Before we can use the display module, we need the following modules installed:</p>
+<ul>
+<li>adafruit_register </li>
+<li>adafruit_framebuf  </li>
+<li>adafruit_ssd1306 </li>
+</ul>
 <p>Copy the libraries into the CIRCUITPY/lib folder. This should give you the following folder structure:</p>
 <p><a class="glightbox" href="../imgs/picomate/oled_file_str.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="OLEDFile_str" src="../imgs/picomate/oled_file_str.png" /></a>
 <a class="glightbox" href="../imgs/picomate/oled_file_str2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="OLEDFile_str2" src="../imgs/picomate/oled_file_str2.png" /></a></p>
-<p>Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<p><pre class="highlight"><code class="language-python">
-
+<p>Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:
+<br></p>
+<pre class="highlight"><code class="language-python">
 import time
 import board 
 import busio
@@ -433,6 +438,7 @@ from adafruit_ssd1306 import SSD1306_I2C
 i2c0 = busio.I2C(scl = board.GP17, sda = board.GP16) 
 
 # 0.96" 128x64 OLED Display
+
 display = SSD1306_I2C(128, 64, i2c0)
 
 def display_text(str, line):
@@ -442,13 +448,15 @@ def display_text(str, line):
 while True:
     display.fill(0)
 
-    display_text("Hello, World!", 0) display_text("It's DeskPi PicoMate!", 2)
+    display_text("Hello, World!", 0) 
+
+    display_text("It's DeskPi PicoMate!", 2)
 
     display.show()
 
     time.sleep(0.5)
 </code></pre>
-Try to change the display text and observe what is printed on the OLED.</p>
+<p>Try to change the display text and observe what is printed on the OLED.</p>
 <h3 id="pdm-microphone">PDM Microphone</h3>
 <p>DeskPi PicoMate has a high quality, low power PDM digital output top-ported omni-directional MEMS microphone.</p>
 <p><a class="glightbox" href="../imgs/picomate/PDM_Mic.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PDM microphone" src="../imgs/picomate/PDM_Mic.jpg" /></a></p>
@@ -472,9 +480,9 @@ Try to change the display text and observe what is printed on the OLED.</p>
 </tbody>
 </table>
 <p>As PDMIn is built into CircuitPython, no separate libraries are necessary for this example! </p>
-<p>Copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<p><pre class="highlight"><code class="language-python">
-
+<p>Copy and paste the following code to the Mu Editor and press <code>Save</code>:
+<br></p>
+<pre class="highlight"><code class="language-python">
 import time 
 import array 
 import math 
@@ -507,15 +515,16 @@ while True:
     print((magnitude,)) 
     time.sleep(0.1)
 </code></pre>
-On Serial Console, you will see the Normalized RMS value of the audio captured by the Microphone. Try to make some sound. You will see the magnitude changes. You can also use the plotter for data inspection. Press the <code>Plotter</code> button on the top menu.
+<p>On Serial Console, you will see the Normalized RMS value of the audio captured by the Microphone. Try to make some sound. You will see the magnitude changes. You can also use the plotter for data inspection. Press the <code>Plotter</code> button on the top menu.
 <a class="glightbox" href="../imgs/picomate/PDM_mic_test.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PDM_MIC_TEST" src="../imgs/picomate/PDM_mic_test.jpg" /></a></p>
 <h3 id="digital-pir-sensor">Digital PIR Sensor</h3>
-<p>DeskPi PicoMate has a Digital PIR sensor pre-wired to <code>GP28</code> on the Pico. The Digital PIR sensor allows you to sense motion, almost used to detect whether a human has moved in or out of the sensors range.</p>
+<p>DeskPi PicoMate has a Digital PIR sensor pre-wired to <code>GP28</code> on the Pico. 
+The Digital PIR sensor allows you to sense motion, almost used to detect whether a human has moved in or out of the sensors range.</p>
 <p><a class="glightbox" href="../imgs/picomate/pirsensor.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PIR_Sensor" src="../imgs/picomate/pirsensor.jpg" /></a></p>
 <p>The Digital PIR sensor acts as a digital output. When the sensor is triggered, the input level of <code>GP28</code> will be <code>High</code> (True) Level.</p>
-<p>Copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<p><pre class="highlight"><code class="language-python">
-  
+<p>Copy and paste the following code to the Mu Editor and press <code>Save</code>:
+<br></p>
+<pre class="highlight"><code class="language-python">
 import board
 import digitalio
 
@@ -535,7 +544,7 @@ while True:
         last_value = pir_sensor.value
         print('Motion ' + ('detected!' if pir_sensor.value else 'removed!'))
 </code></pre>
-Try moving your body and see messages printed on the Serial Console.</p>
+<p>Try moving your body and see messages printed on the Serial Console.</p>
 <p><a class="glightbox" href="../imgs/picomate/pirsensor_test.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PIR_Sensor_test" src="../imgs/picomate/pirsensor_test.jpg" /></a></p>
 <h3 id="6-axis-imu-sensor">6-Axis IMU Sensor</h3>
 <p>DeskPi PicoMate has a 6-Axis IMU sensor (LSM6DS3TR-C) featuring a 3D digital accelerometer and a 3D digital gyroscope. The sensor is pre-wired to the Pico using <code>I2C1</code> with the device address <code>0x6A</code>.
@@ -559,11 +568,14 @@ Try moving your body and see messages printed on the Serial Console.</p>
 </tr>
 </tbody>
 </table>
-<p>Before we can use the sensor, we need the following modules installed:
-- adafruit_register
-- adafruit_lsm6ds</p>
+<p>Before we can use the sensor, we need the following modules installed:</p>
+<ul>
+<li>adafruit_register</li>
+<li>adafruit_lsm6ds</li>
+</ul>
 <p>Copy the libraries into the CIRCUITPY/lib folder. This should give you the following folder structure:</p>
-<p><pre class="highlight"><code class="language-bash">CIRCUITPY/
+<pre class="highlight"><code class="language-bash">
+CIRCUITPY/
 ├── boot_out.txt
 ├── code.py
 └── lib
@@ -583,9 +595,9 @@ Try moving your body and see messages printed on the Serial Console.</p>
     ├── i2c_bits.py
     ├── i2c_struct.py
     └── i2c_struct_array.py</code></pre>
-Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<p><pre class="highlight"><code class="language-python">
-  
+<p>Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:
+<br></p>
+<pre class="highlight"><code class="language-python">
 import time 
 import board 
 import busio
@@ -608,7 +620,7 @@ while True:
 #     print(imu_sensor.gyro) 
 #     time.sleep(0.1)
 </code></pre>
-Press the <code>Plotter</code> button on the top menu, and try moving your board and see the changes in plotter.</p>
+<p>Press the <code>Plotter</code> button on the top menu, and try moving your board and see the changes in plotter.</p>
 <p><a class="glightbox" href="../imgs/picomate/imu_test.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="IMUSensor_test" src="../imgs/picomate/imu_test.jpg" /></a></p>
 <h3 id="3-axis-magnetometer">3-Axis Magnetometer</h3>
 <p>DeskPi PicoMate has a 3-Axis Magnetometer (MMC5603NJ) that can measure magnetic fields surrounding the device. The sensor is pre-wired to the Pico using I2C1 with the device address <code>0x30</code>.</p>
@@ -632,11 +644,13 @@ The table below shows the connections of each pin of the sensor:</p>
 </tr>
 </tbody>
 </table>
-<p>Before we can use the sensor, we need the following modules installed:
-- adafruit_register
-- adafruit_mmc56x3</p>
-<p>Copy the libraries into the CIRCUITPY/lib folder. This should give you the following folder structure:
-<pre class="highlight"><code class="language-bash">
+<p>Before we can use the sensor, we need the following modules installed:</p>
+<ul>
+<li>adafruit_register</li>
+<li>adafruit_mmc56x3</li>
+</ul>
+<p>Copy the libraries into the CIRCUITPY/lib folder. This should give you the following folder structure:</p>
+<p><pre class="highlight"><code class="language-bash">
 CIRCUITPY/
 ├── boot_out.txt
 ├── code.py
@@ -650,9 +664,9 @@ CIRCUITPY/
         ├── i2c_bits.py
         ├── i2c_struct.py
         └── i2c_struct_array.py</code></pre>
-Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<p><pre class="highlight"><code class="language-python">
-  
+Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:
+<br></p>
+<pre class="highlight"><code class="language-python">
 import time 
 import board 
 import busio
@@ -674,7 +688,7 @@ while True:
     print(magnetometer.magnetic)
     time.sleep(0.1)
 </code></pre>
-Press the <code>Plotter</code> button on the top menu, and try moving your board and see the changes in plotter.
+<p>Press the <code>Plotter</code> button on the top menu, and try moving your board and see the changes in plotter.
 <a class="glightbox" href="../imgs/picomate/3xmagnet_test.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="3-Axis Magnetometer test" src="../imgs/picomate/3xmagnet_test.jpg" /></a></p>
 <h3 id="digital-optical-sensor">Digital Optical Sensor</h3>
 <p>DeskPi PicoMate has a Digital Optical Sensor (LTR-381RGB-01) that integrates an ambient light sensor (ALS) and a color sensor (CS). With the advanced RGB color sensor, this sensor converts light (Red, Green, Blue, and IR) intensity to a digital output signal capable of direct I2C interface. The ALS provides a linear response over a wide dynamic range, which is well suited to applications under very low or bright ambient brightness.</p>
@@ -699,11 +713,14 @@ Press the <code>Plotter</code> button on the top menu, and try moving your board
 </tr>
 </tbody>
 </table>
-<p>Before we can use the sensor, we need the following modules installed:
-- adafruit_register
-- ltr381rgb</p>
-<p>Copy the libraries into the CIRCUITPY/lib folder. This should give you the following folder structure:
-<pre class="highlight"><code class="language-bash">CIRCUITPY/
+<p>Before we can use the sensor, we need the following modules installed:</p>
+<ul>
+<li>adafruit_register</li>
+<li>ltr381rgb</li>
+</ul>
+<p>Copy the libraries into the CIRCUITPY/lib folder. This should give you the following folder structure:</p>
+<p><pre class="highlight"><code class="language-bash">
+CIRCUITPY/
 ├── boot_out.txt
 ├── code.py
 └── lib
@@ -717,9 +734,9 @@ Press the <code>Plotter</code> button on the top menu, and try moving your board
     │   └── i2c_struct_array.py
     └── ltr381rgb.py
 </code></pre>
-Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<p><pre class="highlight"><code class="language-python">
-  
+Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:
+<br></p>
+<pre class="highlight"><code class="language-python">
 import time 
 import board 
 import busio
@@ -739,7 +756,10 @@ while True:
     print(optical.raw_data) 
     time.sleep(0.5)
 </code></pre>
-On Serial Console, you will see the calculated lux of ambient light. Try to lit up or dim the sensor. You will see the value changes. You can also use the plotter for raw data inspection. Press the Plotter button on the top menu.</p>
+<p>On Serial Console, you will see the calculated lux of ambient light. 
+Try to lit up or dim the sensor. You will see the value changes. 
+You can also use the plotter for raw data inspection.
+Press the Plotter button on the top menu.</p>
 <p><a class="glightbox" href="../imgs/picomate/DoSensor_test.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Digital Optical Sensor test" src="../imgs/picomate/DoSensor_test.jpg" /></a></p>
 <h3 id="temperature-humidity-sensor">Temperature &amp; Humidity Sensor</h3>
 <p>DeskPi PicoMate has a temperature and humidity sensor (SHT30-DIS), which is pre-wired to the Pico using I2C1 with the device address <code>0x44</code>.</p>
@@ -766,8 +786,9 @@ On Serial Console, you will see the calculated lux of ambient light. Try to lit 
 <p>Before we can use the sensor, we need the following modules installed:
 - adafruit_register
 - adafruit_sht31d</p>
-<p>Copy the libraries into the CIRCUITPY/lib folder. This should give you the following folder structure:
-<pre class="highlight"><code class="language-bash">CIRCUITPY/
+<p>Copy the libraries into the CIRCUITPY/lib folder. This should give you the following folder structure:</p>
+<p><pre class="highlight"><code class="language-bash">
+CIRCUITPY/
 ├── boot_out.txt
 ├── code.py
 └── lib
@@ -780,9 +801,9 @@ On Serial Console, you will see the calculated lux of ambient light. Try to lit 
 │   ├── i2c_struct.py
 │   └── i2c_struct_array.py
 └── adafruit_sht31d.py</code></pre>
-Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:</p>
-<p><pre class="highlight"><code class="language-python">
-  
+Then, copy and paste the following code to the Mu Editor and press <code>Save</code>:
+<br></p>
+<pre class="highlight"><code class="language-python">
 import time 
 import board 
 import busio
@@ -811,7 +832,7 @@ while True:
         sht_sensor.heater = False
         print("Sensor Heater status =", sht_sensor.heater)
 </code></pre>
-On Serial Console, you will see the temperature and humidity printed every <code>2s</code>.</p>
+<p>On Serial Console, you will see the temperature and humidity printed every <code>2s</code>.</p>
 <p><a class="glightbox" href="../imgs/picomate/DHT12_test.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="THS test" src="../imgs/picomate/DHT12_test.jpg" /></a></p>
 <h2 id="libraries-download">Libraries download</h2>
 <ul>
