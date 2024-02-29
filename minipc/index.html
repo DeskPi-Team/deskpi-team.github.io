@@ -105,6 +105,36 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#how-to-enable-usb20-ports-besides-the-usb-c-port">How to enable USB2.0 ports besides the USB-C port?</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-update-eeprom-on-cm4-by-using-mini-cube">How to update eeprom on CM4 by using mini cube?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#building">Building</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#running">Running</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#compute-module-4-update-the-spi-eeprom-bootloader">Compute Module 4 Update the SPI EEPROM bootloader.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#booting-linux">Booting Linux</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#hardware">Hardware</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#hardware-cm4">Hardware - CM4</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#software">Software</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#bootcodebin">bootcode.bin</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#how-to-enable-fan-automatically">How to enable fan automatically?</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#official-fan-setting">Official Fan setting</a>
@@ -197,7 +227,7 @@
 <p>Note: Only supports Raspberry Pi CM4 module</p>
 </blockquote>
 <p>The device provides a mini aluminum alloy radiator and integrates a silent fan that supports PWM speed regulation.</p>
-<p>The bottom board provides a wealth of interfaces, supporting dual full-size HDMI interfaces, RJ45 Ethernet interfaces, 2x OTG USB port (<code>dwc2 Overlay needs to be configured to enable it</code>), and one PCIe interface supports <code>M.2 NVME SSD M-KEY 2242</code> external storage. </p>
+<p>The bottom board provides a wealth of interfaces, supporting dual full-size HDMI interfaces, RJ45 Ethernet interfaces, 2x OTG USB port, and one PCIe interface supports <code>M.2 NVME SSD M-KEY 2242</code> external storage. </p>
 <p>The DIP switch on the back provides the special pins needed to configure the Raspberry Pi CM4 module. (On Compute Module 4 EMMC-DISABLE / nRPIBOOT (GPIO 40) must be fitted to switch the ROM to usbboot mode.)</p>
 <p>Otherwise, the SPI EEPROM bootloader image will be loaded instead.</p>
 <p>The 40Pin GPIO lead out and reserved RTC clock battery interface.</p>
@@ -322,8 +352,121 @@ Shutdown system in terminal or desktop, and then long press the button to cut of
 <p>Hardware write-protection must be <code>enabled</code> via software and then locked by pulling the <code>EEPROM_nWP</code> pin low.</p>
 <h2 id="how-to-enable-usb20-ports-besides-the-usb-c-port">How to enable USB2.0 ports besides the USB-C port?</h2>
 <p><strong>Assume that you are using Raspberry Pi OS (64bit/32bit).</strong></p>
-<p>Adding following parameter into /boot/config.txt file and reboot your raspberry Pi.
-<pre class="highlight"><code class="language-bash">dtoverlay=dwc2,dr_mode=host</code></pre></p>
+<ul>
+<li>The latest official image which you can download from:
+<code>www.raspberrypi.com/software</code> will automatically adding <code>otg_mode=1</code> in
+/boot/firmware/config.txt file, so you don't need to modify any parameter in
+/boot/firmware/config.txt file.</li>
+</ul>
+<h2 id="how-to-update-eeprom-on-cm4-by-using-mini-cube">How to update eeprom on CM4 by using mini cube?</h2>
+<ul>
+<li>This is the USB device boot code which supports the Raspberry Pi 1A, 3A+,
+    Computer Module, Computer Module 3,3+,4S and 4, Raspberry Pi Zero and Zero
+    2W. N.B. In regards to this document CM4 and CM4S have identical software support.
+The default behaviour when run with no arguments is to boot the Raspberry Pi with special firmware so that it emulates USB Mass Storage Device (MSD).
+The host OS will treat this as a normal USB mass storage device allowing the file system to be accessed. 
+If the storage has not been formatted yet (default for Compute Module) then the Raspberry Pi Imager App can be used to install a new operating system.</li>
+</ul>
+<p>Since RPIBOOT is a generic firmware loading interface, it is possible to load other versions of the firmware by passing the -d flag to specify the directory where the firmware should be loaded from. E.g. The firmware in the msd can be replaced with newer/older versions.</p>
+<p>From Raspberry Pi5 onwards the MSD firmware has been replaced with a Linux initramfs providing a mass-storage-gadget.</p>
+<p>For more information run <code>rpiboot -h</code>.</p>
+<h3 id="building">Building</h3>
+<ul>
+<li>Linux / Cygwin / WSL</li>
+</ul>
+<p>Clone this <a href="https://github.com/raspberrypi/usbboot">repository</a> on your Pi or other Linux machine. 
+Make sure that the system date is set correctly, otherwise Git may produce an error.</p>
+<p>This git repository uses symlinks. </p>
+<p>For Windows builds clone the repository under Cygwin</p>
+<pre class="highlight"><code class="language-bash">sudo apt install git libusb-1.0-0-dev pkg-config build-essential
+git clone --depth=1 https://github.com/raspberrypi/usbboot
+cd usbboot
+make
+sudo ./rpiboot</code></pre>
+<p>sudo isn't required if you have write permissions for the /dev/bus/usb device.</p>
+<h3 id="macos">macOS</h3>
+<p>From a macOS machine, you can also run usbboot, just follow the same steps:</p>
+<ul>
+<li>Clone the usbboot repository</li>
+<li>Install libusb (brew install libusb)</li>
+<li>Install pkg-config (brew install pkg-config)</li>
+<li>(Optional) Export the PKG_CONFIG_PATH so that it includes the directory enclosing libusb-1.0.pc</li>
+<li>Build using make</li>
+<li>Run the binary</li>
+</ul>
+<p><pre class="highlight"><code class="language-bash">git clone --depth=1 https://github.com/raspberrypi/usbboot
+cd usbboot
+brew install libusb
+brew install pkg-config
+make
+sudo ./rpiboot</code></pre>
+If the build is unable to find the header file libusb.h then most likely the PKG_CONFIG_PATH is not set properly. This should be set via export PKG_CONFIG_PATH="$(brew --prefix libusb)/lib/pkgconfig".</p>
+<p>If the build fails on an ARM-based Mac with a linker error such as ld: warning: ignoring file /usr/local/Cellar/libusb/1.0.26/lib/libusb-1.0.dylib, building for macOS-arm64 but attempting to link with file built for macOS-x86_64 then you may need to build and install libusb-1.0 yourself:
+<pre class="highlight"><code class="language-bash">$ wget https://github.com/libusb/libusb/releases/download/v1.0.26/libusb-1.0.26.tar.bz2
+$ tar -xf libusb-1.0.26.tar.bz2
+$ cd libusb-1.0.26
+$ ./configure
+$ make
+$ make check
+$ sudo make install</code></pre>
+Running make again should now succeed.</p>
+<h3 id="running">Running</h3>
+<ul>
+<li>
+<p>Compute Module 3
+Fit the EMMC-DISABLE jumper on the Compute Module IO board before powering on the board or connecting the USB cable.</p>
+</li>
+<li>
+<p>Compute Module 4
+On Compute Module 4 EMMC-DISABLE / nRPIBOOT (GPIO 40) must be fitted to switch the ROM to usbboot mode. Otherwise, the SPI EEPROM bootloader image will be loaded instead.</p>
+</li>
+</ul>
+<p>Connect the USB-C cable (from the RPIBOOT host to the MiniCube)</p>
+<h2 id="compute-module-4-update-the-spi-eeprom-bootloader">Compute Module 4 Update the SPI EEPROM bootloader.</h2>
+<p>To update the SPI EEPROM bootloader on a Compute Module 4.</p>
+<ul>
+<li>Modify the EEPROM configuration as desired</li>
+<li>Optionally, replace pieeprom.original.bin with a custom version. The default
+  version here is the latest stable release recommended for use on Compute Module 4.</li>
+</ul>
+<p>N.B The <code>bootcode4.bin</code> file in this directory is actually the <code>recovery.bin</code>
+file used on Raspberry Pi 4 bootloader update cards.</p>
+<pre class="highlight"><code class="language-bash">cd recovery
+./update-pieeprom.sh
+../rpiboot -d .</code></pre>
+<h2 id="booting-linux">Booting Linux</h2>
+<p>The <code>RPIBOOT</code> protocol provides a virtual file system to the Raspberry Pi bootloader and GPU firmware. It's therefore possible to
+boot Linux. To do this, you will need to copy all of the files from a Raspberry Pi boot partition plus create your own
+initramfs.
+On Raspberry Pi 4 / CM4 the recommended approach is to use a <code>boot.img</code> which is a FAT disk image containing
+the minimal set of files required from the boot partition.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>This section describes how to diagnose common <code>rpiboot</code> failures for Compute Modules. Whilst <code>rpiboot</code> is tested on every Compute Module during manufacture the system relies on multiple hardware and software elements. 
+The aim of this guide is to make it easier to identify which component is failing.</p>
+<h3 id="hardware">Hardware</h3>
+<ul>
+<li>Inspect the Compute Module pins and connector for signs of damage and verify that the socket is free from debris.</li>
+<li>Check that the Compute Module is fully inserted.</li>
+<li>Check that <code>nRPIBOOT</code> / EMMC disable is pulled low BEFORE powering on the device.</li>
+<li>On BCM2711, if the USB cable is disconected and the nRPIBOOT jumper is fitted then the green LED should be OFF. If the LED is on then the ROM is detecting that the GPIO for nRPIBOOT is high.</li>
+<li>Remove any hubs between the Compute Module and the host.</li>
+<li>Disconnect all other peripherals from the IO board.</li>
+<li>Verify that the red power LED switches on when the IO board is powered.</li>
+<li>Use another computer to verify that the USB cable for <code>rpiboot</code> can reliably transfer data. For example, connect it to a Raspberry Pi keyboard with other devices connected to the keyboard USB hub.</li>
+</ul>
+<h4 id="hardware-cm4">Hardware - CM4</h4>
+<ul>
+<li>The CM4 EEPROM supports MMC, USB-MSD, USB 2.0, Network and NVMe boot by default. Try booting to Linux from an alternate boot mode (e.g. network) to verify the <code>nRPIBOOT</code> GPIO can be pulled low and that the USB 2.0 interface is working.</li>
+<li>If <code>rpiboot</code> is running but the mass storage device does not appear then try running the <code>rpiboot -d mass-storage-gadget</code> because this uses Linux instead of a custom VPU firmware to implement the mass-storage gadget. This also provides a login console on UART and HDMI.</li>
+</ul>
+<h3 id="software">Software</h3>
+<p>The recommended host setup is Raspberry Pi with Raspberry Pi OS. Alternatively, most Linux X86 builds are also suitable. Windows adds some extra complexity for the USB drivers so we recommend debugging on Linux first.</p>
+<ul>
+<li>Update to the latest software release using <code>apt update rpiboot</code> or download and rebuild this repository from Github.</li>
+<li>Run <code>rpiboot -v | tee log</code> to capture verbose log output. N.B. This can be very verbose on some systems.</li>
+</ul>
+<h4 id="bootcodebin">bootcode.bin</h4>
+<p>Be careful not to overwrite <code>bootcode.bin</code> or <code>bootcode4.bin</code> with the executable from a different subdirectory. The <code>rpiboot</code> process simply looks for a file called <code>bootcode.bin</code> (or <code>bootcode4.bin</code> on BCM2711). However, the file in <code>recovery</code>/<code>secure-boot-recovery</code> directories is actually the <code>recovery.bin</code> EEPROM flashing tool.</p>
 <h2 id="how-to-enable-fan-automatically">How to enable fan automatically?</h2>
 <p>** Assume that your operating system is Raspberry Pi OS (32bit/64bit) **</p>
 <h3 id="official-fan-setting">Official Fan setting</h3>
