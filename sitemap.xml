@@ -16,11 +16,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.deskpi.com/deskpi_super4c/</loc>
-         <lastmod>2025-09-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wiki.deskpi.com/deskpilite/</loc>
          <lastmod>2025-09-04</lastmod>
          <changefreq>daily</changefreq>
@@ -112,6 +107,11 @@
     </url>
     <url>
          <loc>https://wiki.deskpi.com/rackmate_t0/</loc>
+         <lastmod>2025-09-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.deskpi.com/super4c/</loc>
          <lastmod>2025-09-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
