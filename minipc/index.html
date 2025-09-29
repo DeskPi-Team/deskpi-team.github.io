@@ -473,7 +473,7 @@ The aim of this guide is to make it easier to identify which component is failin
 <h4 id="bootcodebin">bootcode.bin</h4>
 <p>Be careful not to overwrite <code>bootcode.bin</code> or <code>bootcode4.bin</code> with the executable from a different subdirectory. The <code>rpiboot</code> process simply looks for a file called <code>bootcode.bin</code> (or <code>bootcode4.bin</code> on BCM2711). However, the file in <code>recovery</code>/<code>secure-boot-recovery</code> directories is actually the <code>recovery.bin</code> EEPROM flashing tool.</p>
 <h2 id="how-to-enable-fan-automatically">How to enable fan automatically?</h2>
-<p><strong> Assume that your operating system is Raspberry Pi OS (32bit/64bit) </strong></p>
+<p>** Assume that your operating system is Raspberry Pi OS (32bit/64bit) **</p>
 <h3 id="official-fan-setting">Official Fan setting</h3>
 <ul>
 <li>Open a terminal and typing following command:</li>
@@ -569,8 +569,8 @@ Execute following command in a terminal:
 <p>** Check RTC time in command line.
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>cat<span class="w"> </span>/proc/driver/rtc<span class="w"> </span>
 </span></code></pre></div></p>
-<p><strong> Setting system time
-</strong>Syntax**
+<p>** Setting system time
+<strong>Syntax</strong>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>date<span class="w"> </span><span class="o">[</span>-u<span class="p">|</span>--utc<span class="p">|</span>--universal<span class="o">]</span><span class="w"> </span><span class="o">[</span>MMDDhhmm<span class="o">[[</span>CC<span class="o">]</span>YY<span class="o">][</span>.ss<span class="o">]]</span>
 </span></code></pre></div>
 For example:
@@ -579,10 +579,10 @@ For example:
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>sudo<span class="w"> </span>date<span class="w"> </span><span class="m">053118062023</span>.22<span class="w"> </span>
 </span></code></pre></div>
 It means setting system time to 2023.05.31 18:06:23. </p>
-<p><strong> Sychronizing system time to HW clock time.
+<p>** Sychronizing system time to HW clock time.
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>sudo<span class="w"> </span>hwclock<span class="w"> </span>-w
 </span></code></pre></div>
-</strong> Check RTC time and system time
+** Check RTC time and system time
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sudo<span class="w"> </span>hwclock<span class="w"> </span><span class="p">;</span><span class="w"> </span>date
 </span></code></pre></div></p>
 <h2 id="faq">FAQ</h2>
