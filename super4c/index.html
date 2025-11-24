@@ -260,8 +260,7 @@
 <p>Super4C is a cluster-based hardware built on the Raspberry Pi CM5. 
 This hardware supports four channels of CM5 and extends almost all interfaces of the CM5, providing users with powerful device connectivity. 
 Additionally, the hardware integrates an ESP32 processing module, offering remote management capabilities for the entire cluster device. 
-For convenience, this document will refer to this cluster board hardware as the "motherboard" in subsequent sections.
-It supports four channels of CM5 and extends almost all the interfaces of CM5, providing users with powerful device - connection capabilities. Meanwhile, the hardware also integrates an ESP32 processing module, which offers remote management capabilities for the entire cluster of devices. For the sake of convenience in explanation, this document will refer to this cluster board hardware as the "motherboard" in the following sections.</p>
+For convenience, this document will refer to this cluster board hardware as the "motherboard" in subsequent sections.</p>
 <p><font color=red> Compatible with Raspberry Pi CM5 Only</font><br> </p>
 <p><img alt="super4c01" src="../imgs/super4c/main_01.png" /> </p>
 <h2 id="features">Features</h2>
@@ -269,27 +268,28 @@ It supports four channels of CM5 and extends almost all the interfaces of CM5, p
 <li>Standard mini ITX form factor</li>
 <li>Supports all Raspberry Pi CM5 modules</li>
 <li>External DC 19V/4.73A power input with redundant interface support and reverse polarity protection</li>
-<li>Four-channel independent DC/DC conversion to provide power for:</li>
+<li>Four-channel independent DC/DC conversion to provide power for following two
+parts:</li>
 <li>Independent power reset button (simultaneously resets CM5, NVMe, 2.5Gbps, 1Gbps, SD card, CAM0/1, etc.)</li>
 <li>Hardware power - on delay (approximately 0.5 seconds each) to avoid inrush current from simultaneous power on</li>
-<li>4 - pin fan connector (directly connected to the DC 19V power port)</li>
+<li>4-pin fan connector (directly connected to the DC 19V power port)</li>
 <li>Supports up to four CM5 modules per channel, each with:</li>
 <li>1x micro HDMI interface</li>
 <li>1x USB 3.0 interface</li>
-<li>1x USB 2.0 interface (Type - C connector, no VBUS output)</li>
+<li>1x USB 2.0 interface (Type-C connector, no VBUS output)</li>
 <li>1x 1Gbps Ethernet interface</li>
 <li>1x 2.5Gbps Ethernet interface (via USB 3.0 expansion)</li>
 <li>1x microSD card interface</li>
-<li>1x M.2 M - key PCIe interface</li>
-<li>1x 4 - pin JST - SH PWM fan interface</li>
+<li>1x M.2 M-key PCIe interface</li>
+<li>1x 4-pin JST-SH PWM fan interface</li>
 <li>1x RTC battery interface</li>
 <li>2x MIPI DSI/CSI - 2 interfaces</li>
 <li>Jumper interface (to disable eMMC, EEPROM, etc.)</li>
-<li>Integrated ESP32 - WROOM - 32E - N4 module</li>
+<li>Integrated ESP32-WROOM-32E-N4 module</li>
 <li>Supports 2.4GHz Wi - Fi + Bluetooth with integrated antenna</li>
 <li>Expanded W5500 100Mbps wired network</li>
-<li>4 - pin UART download interface</li>
-<li>4 - pin I2C expansion interface (for expanding OLED screens, etc.)</li>
+<li>4-pin UART download interface</li>
+<li>4-pin I2C expansion interface (for expanding OLED screens, etc.)</li>
 <li>Two integrated INA3221 chips for measuring voltage and current of six channels on the board</li>
 <li>ESP32 pins can individually control the power switch for each channel and the PMIC_EN signal switch for CM5</li>
 <li>BOOT/EN button</li>
@@ -339,13 +339,12 @@ It can be used in conjunction with the <code>nRPIBOOT</code> signals to program 
 <p>Press-fit interface, only supports <code>CM5 Lite</code> version.</p>
 <h3 id="m2-m-key-interface">M.2 M-Key Interface</h3>
 <ul>
-<li>Supports various M.2 M-key cards. with only PCIe signals on the interface.</li>
+<li>Supports various M.2 M-key cards with only PCIe signals on the interface. </li>
 <li><code>ONLY</code> supports the 2280 form factor.</li>
 </ul>
 <h3 id="fan-interface">Fan Interface</h3>
 <p>Same interface dimensions and signal definitions as the Raspberry Pi Official
-CM5 IO Board. (compatible with Active cooler's JST cable, but do not compatible
-        with the mouting holes) </p>
+CM5 IO Board. (compatible with Active cooler's JST cable. but not compatible with the mounting holes) </p>
 <p><img alt="super4c09" src="../imgs/super4c/main_09.png" /> </p>
 <h3 id="rtc-battery-interface">RTC Battery Interface</h3>
 <p>Same interface dimensions and signal definitions as the official CM5 IO board.</p>
@@ -587,7 +586,7 @@ The motherboard comes with a pre-installed basic firmware that can perform simpl
 <li>In the default firmware, pressing the EN button will reset all CM5_PMIC_ENABLE and DC/DC (5V) ENABLE signals.</li>
 </ul>
 <h4 id="esp32-i2c-address">ESP32 I2C Address</h4>
-<p>The I2C signals of the ESP32 are connected to both the J12 and J6 headers, as well as the two onboard INA3211 chips. The headers can be used to expand external I2C devices.</p>
+<p>The I2C signals of the ESP32 are connected to both the J12 and J6 headers, as well as the two onboard INA3221 chips. The headers can be used to expand external I2C devices.</p>
 <table>
 <thead>
 <tr>
@@ -653,7 +652,7 @@ Before the ESP32's WiFi connects to a specific network, the motherboard will def
 After accessing the Web Controller via AP mode, click the <code>WiFi Setup</code> button on the page to enter the configuration page.</li>
 <li>Enter the desired WiFi network (e.g., your home WiFi) in the WiFi SSID field and the password in the WiFi password field.</li>
 <li>Click <code>Save &amp; Reboot</code> to save the configuration and restart the device (this will take about 10 seconds).</li>
-<li>After rebooting, the OLED screen will display the obtained IP address.o  After rebooting, the OLED screen will display the obtained IP address.</li>
+<li>After rebooting, the OLED screen will display the obtained IP address.</li>
 </ul>
 <p><img alt="stationmode" src="../imgs/super4c/stationmode.jpg" /></p>
 <p>Within the same local network, use a computer or mobile device to open a web browser and enter the IP address displayed on the OLED screen (e.g., "192.168.1.49") to access the Web Controller page.</p>
@@ -685,7 +684,7 @@ This allows users to reconnect and reconfigure the WiFi network.</li>
 <ul>
 <li>Using a computer as an example:
 The Super4C's WiFi defaults to <code>AP mode</code>.
-First, connect your computer's WiFi to the network named <code>Super4C</code> with the defualt password <code>12345678</code>. 
+First, connect your computer's WiFi to the network named <code>Super4C</code> with the default password <code>12345678</code>. 
 Then, enter the IP address <code>192.168.4.1</code> in a web browser and press <code>Enter</code>.</li>
 </ul>
 <p><img alt="webpage2" src="../imgs/super4c/webpage2.png" /></p>
@@ -731,7 +730,7 @@ When powered off, the corresponding channel status displays "OFF" with a gray st
 <hr />
 <h3 id="open-source">Open Source</h3>
 <p>Some pages of the schematics and the ESP32 default firmware source code can be open - sourced to facilitate secondary development of the board by community enthusiasts.
-It will be open source once the firmware has been test out. </p>
+It will be open source once the firmware has been fully test. </p>
 <h3 id="diagram-block">Diagram Block</h3>
 <p><img alt="Diagram Block" src="../imgs/super4c/diagramblock.png" /></p>
 <h3 id="flash-an-image-to-a-compute-module">Flash an image to a Compute Module</h3>
@@ -741,7 +740,7 @@ Lite variants of Compute Modules do not have on-board eMMC. Instead, follow the 
 <h4 id="prerequisites">Prerequisites</h4>
 <p>To flash the Compute Module eMMC, you need the following:
 * Another computer, referred to in this guide as the host device. You can use Linux (we recommend Raspberry Pi OS or Ubuntu), Windows 11, or macOS.
-*   Super4C mother board.
+*   Super4C motherboard.
 *   A USB-C cable for Compute Module models flashing image. </p>
 <h4 id="set-up-the-io-board">Set up the IO Board</h4>
 <ul>
@@ -897,7 +896,7 @@ Generate &amp; push SSH key (password login is kept):</li>
 <h3 id="run-once">Run once:</h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-f<span class="w"> </span>~/.ssh/id_ed25519<span class="w"> </span>-N<span class="w"> </span><span class="s1">&#39;&#39;</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>ansible-galaxy<span class="w"> </span>collection<span class="w"> </span>install<span class="w"> </span>ansible.posix<span class="w">   </span><span class="c1"># only if using FQCN</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/hosts.yaml<span class="w"> </span>playbooks/init-ssh.yml
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/hosts.yml<span class="w"> </span>playbooks/init-ssh.yml
 </span></code></pre></div>
 <h3 id="basic-system-initialization">Basic System Initialization</h3>
 <ul>
@@ -941,7 +940,7 @@ Generate &amp; push SSH key (password login is kept):</li>
 </span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="w">    </span><span class="nt">reboot</span><span class="p">:</span>
 </span></code></pre></div>
 * Execute:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/hosts.yaml<span class="w"> </span>playbooks/site.yml
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/hosts.yml<span class="w"> </span>playbooks/site.yml
 </span></code></pre></div></p>
 <h2 id="create-python-virtualenv-install-data-science-packages">Create Python Virtualenv &amp; Install Data-Science Packages</h2>
 <ul>
@@ -993,7 +992,7 @@ Generate &amp; push SSH key (password login is kept):</li>
 </span><span id="__span-11-45"><a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a><span class="w">          </span><span class="no">[ -d &quot;{{ venv_path }}&quot; ] &amp;&amp; source {{ venv_path }}/bin/activate</span>
 </span></code></pre></div></li>
 <li>Execute:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/hosts.yaml<span class="w"> </span>playbooks/venv.yml
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/hosts.yml<span class="w"> </span>playbooks/venv.yml
 </span></code></pre></div></li>
 </ul>
 <h2 id="gather-hostname-ip-disk-information">Gather Hostname, IP, Disk Information</h2>
@@ -1025,7 +1024,7 @@ Generate &amp; push SSH key (password login is kept):</li>
 </span></code></pre></div></li>
 <li>Run &amp; view:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>jq
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/hosts.yaml<span class="w"> </span>playbooks/gather-host-info.yml
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/hosts.yml<span class="w"> </span>playbooks/gather-host-info.yml
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>cat<span class="w"> </span>report/*.json<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-s<span class="w"> </span>.
 </span></code></pre></div></li>
 </ul>
@@ -1050,8 +1049,8 @@ Generate &amp; push SSH key (password login is kept):</li>
 </span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">      </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reboot</span><span class="w"> </span>
 </span></code></pre></div></li>
 <li>Execute: 
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/hosts.yaml<span class="w"> </span>playbooks/shutdown.yml<span class="w">   </span><span class="c1"># shutdown</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/hosts.yaml<span class="w"> </span>playbooks/reboot.yml<span class="w">    </span><span class="c1"># reboot  </span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/hosts.yml<span class="w"> </span>playbooks/shutdown.yml<span class="w">   </span><span class="c1"># shutdown</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory/hosts.yml<span class="w"> </span>playbooks/reboot.yml<span class="w">    </span><span class="c1"># reboot  </span>
 </span></code></pre></div></li>
 </ul>
 <h3 id="get-the-cpu-temperature">Get the CPU temperature</h3>
@@ -1148,7 +1147,7 @@ cpu_temp/
 <td>YAML file start marker.</td>
 </tr>
 <tr>
-<td><code>- name: 获取树莓派管理主机的 CPU 温度</code></td>
+<td><code>- name: Get Raspberry Pi CPU Temperature</code></td>
 <td>Name of the play; it appears in the playbook output.</td>
 </tr>
 <tr>
@@ -1176,7 +1175,7 @@ cpu_temp/
 <td>Uses regex to strip prefixes like <code>temp=</code> and the trailing <code>'C</code>, leaving only the numeric value (e.g., <code>47.2</code>).</td>
 </tr>
 <tr>
-<td><code>debug: msg: "主机 ..."</code></td>
+<td><code>debug: msg: "Host: ..."</code></td>
 <td>Prints the formatted temperature for each host in real time on the console.</td>
 </tr>
 <tr>
@@ -1206,7 +1205,7 @@ cpu_temp/
 <tbody>
 <tr>
 <td>Check connectivity</td>
-<td><code>ansible cm5_cluster -i inventory/hosts.yaml -m ping</code></td>
+<td><code>ansible cm5_cluster -i inventory/hosts.yml -m ping</code></td>
 </tr>
 <tr>
 <td>Ad-hoc shell</td>
