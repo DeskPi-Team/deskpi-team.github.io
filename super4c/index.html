@@ -8,7 +8,7 @@
     <title>DeskPi Super4C - DeskPi Products Wiki</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
@@ -17,12 +17,11 @@
         var mkdocs_page_url = "/super4c/";
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -34,7 +33,7 @@
           <a href=".." class="icon icon-home"> DeskPi Products Wiki
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -85,7 +84,7 @@
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">DeskPi Super4C</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">DeskPi Super4C</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#product-sku">Product SKU</a>
     </li>
@@ -118,6 +117,10 @@
     <li class="toctree-l3"><a class="reference internal" href="#microsd-card-interface">microSD Card Interface</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#m2-m-key-interface">M.2 M-Key Interface</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#tested-ssds-list">Tested SSDs List</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#fan-interface">Fan Interface</a>
     </li>
@@ -241,8 +244,8 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>DeskPi Super4C</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">DeskPi Super4C</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -342,6 +345,24 @@ It can be used in conjunction with the <code>nRPIBOOT</code> signals to program 
 <li>Supports various M.2 M-key cards with only PCIe signals on the interface. </li>
 <li><code>ONLY</code> supports the 2280 form factor.</li>
 </ul>
+<h4 id="tested-ssds-list">Tested SSDs List</h4>
+<ul>
+<li>The following SSDs have been tested and demostrated good performance when used
+with M.2 M-key Interface, supporting only PCIe signals:</li>
+</ul>
+<pre> 
+1. WD_BLACK SN7100 PCIe Gen 4.0 NVMe SSD 1TB M.2 2280 M-Key 
+2. WD_BLACK SN8100 PCIe Gen 5.0 NVMe SSD  1TB M.2 2280 M-Key 
+3. WD_BLACK SN770 PCIe Gen 4.0 NVMe SSD  2TB M.2 2280 M-Key 
+4. Fanxiang Jing PCIe Gen 4.0 NVMe SSD 512GB M.2 2280 M-Key 
+5. Lexar NQ790 PCIe Gen 4.0x4 NVMe SSD 2TB M.2 2280 M-Key
+6. SAMSUNG 990 PRO PCIe 4.0 NVMe SSD 2TB M.2 2280 M-Key 
+</pre>
+
+<blockquote>
+<p>NOTE: Due to the limitations of the Raspberry Pi's PCIex1 interface, the
+performance of high-speed SSDs may be downgraded.  </p>
+</blockquote>
 <h3 id="fan-interface">Fan Interface</h3>
 <p>Same interface dimensions and signal definitions as the Raspberry Pi Official
 CM5 IO Board. (compatible with Active cooler's JST cable. but not compatible with the mounting holes) </p>
@@ -1253,14 +1274,15 @@ cpu_temp/
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>
